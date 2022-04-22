@@ -19,3 +19,8 @@ php composer.phar clean
 # click on run in replit and access:
 # To work with APIs. Try now https://{your-url}/training/hello
 ```
+# Access to the API
+Use the following url: https://php.cloudframework.repl.co/0-basics/00-hello to test the first end-pont.
+
+You can see the code of the end-point under the folder:
+```/api/0-basics/00-hello.php```
