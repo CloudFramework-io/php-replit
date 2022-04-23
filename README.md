@@ -11,7 +11,7 @@ php -r "unlink('composer-setup.php');"
 
 # install cloudframework php library specialiced for appengine
 php composer.phar require cloudframework-io/appengine-php-core-7.4
-php vendor/cloudframework-io/appengine-php-core-7.4/install.php?replit
+php vendor/cloudframework-io/appengine-php-core-7.4/install.php replit
 
 # create temporal local data directory: ./local_data/cache and clean cache
 php composer.phar clean
