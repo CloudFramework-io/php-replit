@@ -8,6 +8,8 @@ The following instructions have been adapted to replit.com
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
+php -r "copy('https://phpdoc.org/phpDocumentor.phar', 'phpDocumentor.phar');"
+
 
 # install cloudframework php library specialiced for appengine
 php composer.phar require cloudframework-io/appengine-php-core-7.4
