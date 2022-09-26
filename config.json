@@ -1,6 +1,7 @@
 {
   "--:API": "API Configuration",
   "core.api.urls": ["/"],
+  "restful.logs.allowed_ips":"2.139.193.230",
 
   "--:ERP": "--- ERP Configuration ---",
   "core.erp.platform_id": "",
