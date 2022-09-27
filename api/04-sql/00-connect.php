@@ -38,22 +38,45 @@ class API extends RESTful
      */
     public function ENDPOINT_test()
     {
-      //region CHECK method and mandatory params
-      if(!$this->checkMethod('POST')) return;
-      if(!$dbServer = $this->checkMandatoryFormParam('dbServer')) return;
-      if(!$dbUser = $this->checkMandatoryFormParam('dbServer')) return;
-      if(!$dbPassword = $this->checkMandatoryFormParam('dbPassword')) return;
-      if(!$dbName = $this->checkMandatoryFormParam('dbName')) return;
-      //endregion
+        //region CHECK method and mandatory params
+        if(!$this->checkMethod('POST')) return;
+        //endregion
 
-      
-      switch($this->method) {
-        case "GET":
-            $this->addReturnData('The call is GET. Hello world');
-            break;
-        default:
-            $this->addReturnData('The Call is not GET. The call is GET. Hello world. Hello world');
-            break;
-      }
+        //region FEED $config with mandatory params
+        $config = [];
+        if(!$config['dbServer'] = $this->checkMandatoryFormParam('dbServer')) return;
+        if(!$config['dbUser'] = $this->checkMandatoryFormParam('dbUser')) return;
+        if(!$config['dbPassword'] = $this->checkMandatoryFormParam('dbPassword')) return;
+        if(!$config['dbName'] = $this->checkMandatoryFormParam('dbName')) return;
+        //endregion
+
+        //region FEED $config with optional params
+        $config['dbSocket'] = $this->getFormParamater('dbSocket')?:null;
+        $config['dbProxy'] = $this->getFormParamater('dbProxy')?:null;
+        $config['dbProxyHeaders'] = $this->getFormParamater('dbProxyHeaders')?:null;
+        $config['dbCharset'] = $this->getFormParamater('dbCharset')?:null;
+        $config['dbPort'] = $this->getFormParamater('dbPort')?:null;
+        //endregion
+
+        //region SET $this->core->config->processConfigData($config);
+        $this->core->config->processConfigData($config);
+        //endregion
+
+        //region CREAT $sql CloudSQL object.
+        /** @var CloudSQL $sql */
+        $sql = $this->core->loadClass('CloudSQL');
+        if($sql->error()) return $this->setErrorFromCodelib('system-error',$sql->getError());
+        //endregion
+
+        //region CONNECT and execute SET $query_result with the result of the query: SELECT count(*) from test
+        if(!$sql->connect()) return $this->setErrorFromCodelib('system-error',$sql->getError());
+        $query_result = $sql->getDataFromQuery('SELECT count(*) from test');
+        if($sql->error()) return $this->setErrorFromCodelib('system-error',$sql->getError());
+        //endregion
+
+        //region RETURN result
+        $this->addReturnData(['SELECT count(*) from test'=>$query_result]);
+        //endregion
+
     }
 }
