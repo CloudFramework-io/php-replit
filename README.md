@@ -6,6 +6,16 @@ CloudFramwork Academy Instructions can be found [here](https://www.notion.so/BAC
 The following instructions have been adapted to replit.com
 
 ```shell
+# INSTALL temporal gcloud sdk for GCP Credentials
+cd
+curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-411.0.0-linux-x86_64.tar.gz
+tar xzf google-cloud-cli-411.0.0-linux-x86_64.tar.gz
+rm google-cloud-cli-411.0.0-linux-x86_64.tar.gz
+./google-cloud-sdk/bin/gcloud auth application-default login
+## follow the instructions to accept GCP credentials
+# COPY the content .config/gcloud/application_default_credentials.json INSIDE OF REPLIT SECRET VAR CALL: CF_GOOGLE_APPLICATION_CREDENTIALS
+
+
 # INSTALL cloudframework php library specialiced for appengine
 # selection php74 packages
 composer require cloudframework-io/appengine-php-core-7.4
