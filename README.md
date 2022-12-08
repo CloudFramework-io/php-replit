@@ -1,7 +1,9 @@
 # Development CloudFramework in Replit
 Following [CloudFramework Instructions](https://www.notion.so/cloudframework/appengine-php-core20-74c573448dc94ebba7e51fc86b8ad9cb) to start programming in localhost
 
-CloudFramwork Academy Instructions can be found [here](https://www.notion.so/BACKEND-PHP-7-4-OPTIMIZED-FOR-APPENGINE-STANDARD-AND-CLOUDFUNCTIONS-160765f1db5a41fda8aedea6628e6cd1)
+CloudFramwork Academy Instructions can be found [here](https://www.notion.so/cloudframework-academy/BACKEND-PHP-7-4-OPTIMIZED-FOR-APPENGINE-STANDARD-AND-CLOUDFUNCTIONS-e03c20b27bad412ba449814c02248097)
+
+
 
 The following instructions have been adapted to replit.com
 
@@ -18,6 +20,7 @@ rm google-cloud-cli-411.0.0-linux-x86_64.tar.gz
 
 # INSTALL cloudframework php library specialiced for appengine
 # selection php74 packages
+cd php
 composer require cloudframework-io/appengine-php-core-7.4
 
 # INSTALL basic files and directories

@@ -38,30 +38,7 @@ class API extends RESTful
      */
     public function ENDPOINT_test()
     {
-        //region CHECK method and mandatory params
-        if(!$this->checkMethod('POST')) return;
-        //endregion
-
-        //region FEED $config with mandatory params
-        $config = [];
-        if(!$config['dbServer'] = $this->checkMandatoryFormParam('dbServer')) return;
-        if(!$config['dbUser'] = $this->checkMandatoryFormParam('dbUser')) return;
-        if(!$config['dbPassword'] = $this->checkMandatoryFormParam('dbPassword')) return;
-        if(!$config['dbName'] = $this->checkMandatoryFormParam('dbName')) return;
-        //endregion
-
-        //region FEED $config with optional params
-        $config['dbSocket'] = $this->getFormParamater('dbSocket')?:null;
-        $config['dbProxy'] = $this->getFormParamater('dbProxy')?:null;
-        $config['dbProxyHeaders'] = $this->getFormParamater('dbProxyHeaders')?:null;
-        $config['dbCharset'] = $this->getFormParamater('dbCharset')?:null;
-        $config['dbPort'] = $this->getFormParamater('dbPort')?:'3306';
-        //endregion
-
-        //region SET $this->core->config->processConfigData($config);
-        $this->core->config->processConfigData($config);
-        //endregion
-
+        
         //region CREAT $sql CloudSQL object.
         /** @var CloudSQL $sql */
         $sql = $this->core->loadClass('CloudSQL');

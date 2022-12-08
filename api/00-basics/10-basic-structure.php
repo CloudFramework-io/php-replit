@@ -45,7 +45,7 @@ class API extends RESTful
               $this->addReturnData('The call is GET. Hello world');
               break;
           default:
-              $this->addReturnData('The Call is not GET. The call is GET. Hello world. Hello world');
+              $this->addReturnData("The Call is {$this->method}. Hello world");
               break;
         }
     }
