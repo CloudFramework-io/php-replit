@@ -1,12 +1,16 @@
 <?php
 /**
  * User $this->core->user object to authentication
- * We recomment to use the following structure to build your API. Try this URLs:
- *     https://php.cloudframework.repl.co/03-sql/00-connect
+ * We recommend to use the following structure to build your API. Try this URLs:
+ *     https://php.cloudframework.repl.co/03-datastore/00-connect
  */
 class API extends RESTful
 {
-    var $end_point= '';
+    private $end_point= '';
+
+    /**
+     * main END-POINT Redirector /03-datastore/00-connect/<end-point>
+     */
     function main()
     {
         //You can restrict methods in main level
@@ -20,7 +24,7 @@ class API extends RESTful
     }
 
     /**
-     * Endpoint to add a default feature. We suggest to use this endpoint to explain 
+     * /default END-POINT to add a default feature. We suggest to use this endpoint to explain
      * how to use other endpoints
      */
     public function ENDPOINT_default()
@@ -34,32 +38,38 @@ class API extends RESTful
     }
 
     /**
-     * Endpoint to show Hello World message
+     * /test END-POINT to show how to connect with a Datastore
      */
     public function ENDPOINT_test()
     {
         
-        //region CREAT $sql CloudSQL object.
-        /** @var CloudSQL $sql */
-        $sql = $this->core->loadClass('CloudSQL');
-        if($sql->error()) return $this->setErrorFromCodelib('system-error',$sql->getError());
+        //region SET (DataStore)$datastore from $params['entity_name'=>'Countries']
+        $params = [
+            'entity_name'=>'Countries',
+            'namespace'=>'academy',
+            'schema'=>[
+                'KeyName' => ['keyname', 'index'],
+                'Title'=> ['string','index']
+            ],
+            'options'=>[
+                'projectId'=>'cloudframework-academy',
+                'transport'=>'rest',
+                'keyFile'=>null
+            ]
+        ];
+        /** @var DataStore $datastore */
+        $datastore = $this->core->loadClass('DataStore',$params);
+        if($datastore->error) return $this->setErrorFromCodelib('system-error',$datastore->errorMsg);
         //endregion
 
-        //region CONNECT and execute SET $query_result with the result of the query: SELECT count(*) from test
-
-        // By default $sql->connect will search for config vards: dbUser,dbPassword etc..
-        if(!$sql->connect()) return $this->setErrorFromCodelib('system-error',$sql->getError());
-
-        // Also we can establish the connection by parameter
-        //if(!$sql->connect($config['dbServer'],$config['dbUser'],$config['dbPassword'],$config['dbName'],$config['dbPort'],$config['dbSocket'],$config['dbCharset'])) return $this->setErrorFromCodelib('system-error',$sql->getError());
-
-        $query_result = $sql->getDataFromQuery('SELECT count(*) from test');
-        if($sql->error()) return $this->setErrorFromCodelib('system-error',$sql->getError());
-        $sql->close();
+        //region QUERY $countries from $datastore
+        $datastore->limit = 500; //By defult limit is 200
+        $countries = $datastore->fetchAll();
+        if($datastore->error) return $this->setErrorFromCodelib('system-error',$datastore->errorMsg);
         //endregion
 
-        //region RETURN result
-        $this->addReturnData(['SELECT count(*) from test'=>$query_result]);
+        //region RETURN ['numrows'=>count($countries),'countries'=>$countries]
+        return $this->addReturnData(['numrows'=>count($countries),'countries'=>$countries]);
         //endregion
 
     }

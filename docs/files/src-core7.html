@@ -60,87 +60,77 @@
 </h4>
 
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
-    <a href="packages/classes.html" class="">classes</a>
+    <a href="packages/CoreClasses.html" class="">CoreClasses</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/LabClasses.html" class="">LabClasses</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Core.html" class="">Core</a>
 </h4>
     <ul class="phpdocumentor-list">
                     <li>
-                <a href="packages/classes-cfa.html" class="">cfa</a>
+                <a href="packages/Core-core.html" class="">core</a>
                 
             </li>
                     <li>
-                <a href="packages/classes-cfi.html" class="">cfi</a>
+                <a href="packages/Core-perfomance.html" class="">perfomance</a>
+                
+            </li>
+                    <li>
+                <a href="packages/Core-is.html" class="">is</a>
+                
+            </li>
+                    <li>
+                <a href="packages/Core-system.html" class="">system</a>
+                
+            </li>
+                    <li>
+                <a href="packages/Core-log.html" class="">log</a>
+                
+            </li>
+                    <li>
+                <a href="packages/Core-config.html" class="">config</a>
+                
+            </li>
+                    <li>
+                <a href="packages/Core-session.html" class="">session</a>
+                
+            </li>
+                    <li>
+                <a href="packages/Core-security.html" class="">security</a>
+                
+            </li>
+                    <li>
+                <a href="packages/Core-cache.html" class="">cache</a>
+                
+            </li>
+                    <li>
+                <a href="packages/Core-request.html" class="">request</a>
+                
+            </li>
+                    <li>
+                <a href="packages/Core-user.html" class="">user</a>
+                
+            </li>
+                    <li>
+                <a href="packages/Core-localization.html" class="">localization</a>
+                
+            </li>
+                    <li>
+                <a href="packages/Core-model.html" class="">model</a>
                 
             </li>
             </ul>
 
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
-    <a href="packages/Email.html" class="">Email</a>
+    <a href="packages/Logic.html" class="">Logic</a>
 </h4>
 
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
-    <a href="packages/core.html" class="">core</a>
-</h4>
-    <ul class="phpdocumentor-list">
-                    <li>
-                <a href="packages/core-core.html" class="">core</a>
-                
-            </li>
-                    <li>
-                <a href="packages/core-perfomance.html" class="">perfomance</a>
-                
-            </li>
-                    <li>
-                <a href="packages/core-session.html" class="">session</a>
-                
-            </li>
-                    <li>
-                <a href="packages/core-system.html" class="">system</a>
-                
-            </li>
-                    <li>
-                <a href="packages/core-log.html" class="">log</a>
-                
-            </li>
-                    <li>
-                <a href="packages/core-is.html" class="">is</a>
-                
-            </li>
-                    <li>
-                <a href="packages/core-cache.html" class="">cache</a>
-                
-            </li>
-                    <li>
-                <a href="packages/core-user.html" class="">user</a>
-                
-            </li>
-                    <li>
-                <a href="packages/core-config.html" class="">config</a>
-                
-            </li>
-                    <li>
-                <a href="packages/core-security.html" class="">security</a>
-                
-            </li>
-                    <li>
-                <a href="packages/core-localization.html" class="">localization</a>
-                
-            </li>
-                    <li>
-                <a href="packages/core-request.html" class="">request</a>
-                
-            </li>
-                    <li>
-                <a href="packages/core-model.html" class="">model</a>
-                
-            </li>
-            </ul>
-
-                                    <h4 class="phpdocumentor-sidebar__root-namespace">
-    <a href="packages/logic.html" class="">logic</a>
-</h4>
-
-                                    <h4 class="phpdocumentor-sidebar__root-namespace">
-    <a href="packages/scripts.html" class="">scripts</a>
+    <a href="packages/Scripts.html" class="">Scripts</a>
 </h4>
 
                         </section>
@@ -160,23 +150,51 @@
 
             <div class="phpdocumentor-column -eight phpdocumentor-content">
                     <ul class="phpdocumentor-breadcrumbs">
-            <li class="phpdocumentor-breadcrumb"><a href="packages/core.html">core</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="packages/Core.html">Core</a></li>
     </ul>
 
     <article class="phpdocumentor-element -file">
         <h2 class="phpdocumentor-content__title">Core7.php</h2>
 
-            <p class="phpdocumentor-summary">Core classes developend in PHP7.x to be used to develop APIs, Scripts, Web Pages</p>
+            <p class="phpdocumentor-summary">Core classes developed in ^PHP7.4 to be used to develop APIs, Scripts, Web Pages</p>
 
     <section class="phpdocumentor-description"><p>Core7 class is included in your APIs as $this-&gt;core and it includes objects
-of other classes to facilitate your development:</p>
+of other classes to facilitate your developments.</p>
 <ul>
-<li>$this-&gt;core-&gt;session</li>
-<li>$this-&gt;core-&gt;logs</li>
+<li>$this-&gt;core = new Core7();</li>
+<li>$this-&gt;core-&gt;__p = new CorePerformance();</li>
+<li>$this-&gt;core-&gt;is = new CoreIs();</li>
+<li>$this-&gt;core-&gt;system = new CoreSystem($root_path);</li>
+<li>$this-&gt;core-&gt;logs = new CoreLog();</li>
+<li>$this-&gt;core-&gt;errors = new CoreLog();</li>
+<li>$this-&gt;core-&gt;config = new CoreConfig($this, <strong>DIR</strong> . '/config.json');</li>
+<li>$this-&gt;core-&gt;session = new CoreSession($this);</li>
+<li>$this-&gt;core-&gt;security = new CoreSecurity($this);</li>
+<li>$this-&gt;core-&gt;cache = new CoreCache($this);</li>
+<li>$this-&gt;core-&gt;request = new CoreRequest($this);</li>
+<li>$this-&gt;core-&gt;user = new CoreUser($this);</li>
+<li>$this-&gt;core-&gt;localization = new CoreLocalization($this);</li>
+<li>$this-&gt;core-&gt;model = new CoreModel($this);</li>
+<li>$this-&gt;core-&gt;cfiLog = new CFILog($this);</li>
 </ul>
 </section>
 
 
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">author</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>Héctor López <a href="mailto:hlopez@cloudframework.io">hlopez@cloudframework.io</a></p>
+</section>
+
+                                    </dd>
+                        </dl>
 
 
 
@@ -189,43 +207,42 @@ of other classes to facilitate your development:</p>
 <dl class="phpdocumentor-table-of-contents">
     
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Core7.html"><abbr title="\Core7">Core7</abbr></a></dt>
-        <dd>Core7 class is included in your APIs as $this-&gt;core and it includes objects
+        <dd>$this-&gt;core Core7 class is included in your APIs as $this-&gt;core and it includes objects
 of other classes to facilitate your development:</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CorePerformance.html"><abbr title="\CorePerformance">CorePerformance</abbr></a></dt>
-        <dd>Class to track performance</dd>
-            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreSession.html"><abbr title="\CoreSession">CoreSession</abbr></a></dt>
-        <dd>Class to manage session</dd>
+        <dd>$this-&gt;core-&gt;__p Class to track performance</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreIs.html"><abbr title="\CoreIs">CoreIs</abbr></a></dt>
+        <dd>$this-&gt;core-&gt;is Class to answer is? questions.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreSystem.html"><abbr title="\CoreSystem">CoreSystem</abbr></a></dt>
-        <dd>Class to interacto with with the System variables</dd>
+        <dd>$this-&gt;core-&gt;system Class to interacto with with the System variables</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreLog.html"><abbr title="\CoreLog">CoreLog</abbr></a></dt>
-        <dd>Class to manage Logs &amp; Errors
+        <dd>$this-&gt;core-&gt;logs, $this-&gt;core-&gt;errors Class to manage Logs &amp; Errors
 https://cloud.google.com/logging/docs/setup/php
 $logger-&gt;info(&#039;This will show up as log level INFO&#039;);
 $logger-&gt;warning(&#039;This will show up as log level WARNING&#039;);
 $logger-&gt;error(&#039;This will show up as log level ERROR&#039;);</dd>
-            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreIs.html"><abbr title="\CoreIs">CoreIs</abbr></a></dt>
-        <dd>Class to answer is? questions. $this-&gt;core-&gt;is-&gt;</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreConfig.html"><abbr title="\CoreConfig">CoreConfig</abbr></a></dt>
+        <dd>$this-&gt;core-&gt;config Class to manage CloudFramework configuration.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreSession.html"><abbr title="\CoreSession">CoreSession</abbr></a></dt>
+        <dd>$this-&gt;core-&gt;session Class to manage session</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreSecurity.html"><abbr title="\CoreSecurity">CoreSecurity</abbr></a></dt>
+        <dd>$this-&gt;core-&gt;security Class to manage the security access and dynamic getenv variables</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreCache.html"><abbr title="\CoreCache">CoreCache</abbr></a></dt>
-        <dd>Class to manage Cache in your solutions. Use ```$this-&gt;core-&gt;cache```
-https://cloud.google.com/appengine/docs/standard/php7/using-memorystore#setup_redis_db</dd>
+        <dd>$this-&gt;core-&gt;cache Class to manage Cache in your solutions.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreCacheFile.html"><abbr title="\CoreCacheFile">CoreCacheFile</abbr></a></dt>
         <dd>Class to manate Cache in Files</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreCacheDataStore.html"><abbr title="\CoreCacheDataStore">CoreCacheDataStore</abbr></a></dt>
         <dd>Class to manage Cache in DataStore</dd>
-            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreUser.html"><abbr title="\CoreUser">CoreUser</abbr></a></dt>
-        <dd>Class to manage User information</dd>
-            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreConfig.html"><abbr title="\CoreConfig">CoreConfig</abbr></a></dt>
-        <dd>Class to manage CloudFramework configuration.</dd>
-            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreSecurity.html"><abbr title="\CoreSecurity">CoreSecurity</abbr></a></dt>
-        <dd>Class to manage the security access and dynamic getenv variables</dd>
-            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreLocalization.html"><abbr title="\CoreLocalization">CoreLocalization</abbr></a></dt>
-        <dd>Class to manage localizations</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreRequest.html"><abbr title="\CoreRequest">CoreRequest</abbr></a></dt>
-        <dd>Class to manage HTTP requests</dd>
+        <dd>$this-&gt;core-&gt;request Object is used to handle http requests</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreUser.html"><abbr title="\CoreUser">CoreUser</abbr></a></dt>
+        <dd>$this-&gt;core-&gt;user Class to manage User information</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreLocalization.html"><abbr title="\CoreLocalization">CoreLocalization</abbr></a></dt>
+        <dd>$this-&gt;core-&gt;localization Class to manage localizations</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreModel.html"><abbr title="\CoreModel">CoreModel</abbr></a></dt>
-        <dd>Class to manage Data Models</dd>
+        <dd>$this-&gt;core-&gt;model Class to manage Data Models</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CFILog.html"><abbr title="\CFILog">CFILog</abbr></a></dt>
-        <dd>Class to Manage Datastore Logs and Bitacora Entries</dd>
+        <dd>$this-&gt;core-&gt;cfiLog Class to Manage Datastore Logs and Bitacora Entries</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/CoreLogic2020.html"><abbr title="\CoreLogic2020">CoreLogic2020</abbr></a></dt>
         <dd>Class to be extended for the creation of a logic application.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Scripts2020.html"><abbr title="\Scripts2020">Scripts2020</abbr></a></dt>
@@ -241,33 +258,12 @@ https://cloud.google.com/appengine/docs/standard/php7/using-memorystore#setup_re
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a href="namespaces/default.html#constant__CLOUDFRAMEWORK_CORE_CLASSES_">_CLOUDFRAMEWORK_CORE_CLASSES_</a>
-    <span>
-        &nbsp;= \TRUE                            </span>
-</dt>
-<dd></dd>
-
                             <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="namespaces/default.html#function___print">__print()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Echo in output a group of vars passed as args</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="namespaces/default.html#function___fatal_handler">__fatal_handler()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
     <a href="namespaces/default.html#function__print">_print()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Print a group of mixed vars passed as arguments</dd>
+<dd>Print a group of mixed vars passed as arguments. Example _print($object,$array,$class,...)</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -function -">
     <a href="namespaces/default.html#function__printe">_printe()</a>
@@ -281,128 +277,12 @@ https://cloud.google.com/appengine/docs/standard/php7/using-memorystore#setup_re
 
 
         
-    <section class="phpdocumentor-constants">
-        <h3 class="phpdocumentor-elements__header" id="constants">
-            Constants
-            <a href="files/src-core7.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
-        </h3>
-                    <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant__CLOUDFRAMEWORK_CORE_CLASSES_">
-        _CLOUDFRAMEWORK_CORE_CLASSES_
-        <a href="namespaces/default.html#constant__CLOUDFRAMEWORK_CORE_CLASSES_" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Core7.php"><a href="files/src-core7.html"><abbr title="src/Core7.php">Core7.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">17</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-signature phpdocumentor-code ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">_CLOUDFRAMEWORK_CORE_CLASSES_</span>
-    = <span class="phpdocumentor-signature__default-value">\TRUE</span>
-</code>
-
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-            </section>
 
             <section class="phpdocumentor-functions">
         <h3 class="phpdocumentor-elements__header" id="functions">
             Functions
             <a href="files/src-core7.html#functions" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
-                    <article class="phpdocumentor-element -function - ">
-    <h4 class="phpdocumentor-element__name" id="function___print">
-        __print()
-        <a href="namespaces/default.html#function___print" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Core7.php"><a href="files/src-core7.html"><abbr title="src/Core7.php">Core7.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">24</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Echo in output a group of vars passed as args</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility"></span>
-                    <span class="phpdocumentor-signature__name">__print</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$args</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$args</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Element to print.</p>
-</section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article class="phpdocumentor-element -function - ">
-    <h4 class="phpdocumentor-element__name" id="function___fatal_handler">
-        __fatal_handler()
-        <a href="namespaces/default.html#function___fatal_handler" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Core7.php"><a href="files/src-core7.html"><abbr title="src/Core7.php">Core7.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">54</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility"></span>
-                    <span class="phpdocumentor-signature__name">__fatal_handler</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-    
-    
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">throws</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
-                                                            
-                                             
-                                    </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
                     <article class="phpdocumentor-element -function - ">
     <h4 class="phpdocumentor-element__name" id="function__print">
         _print()
@@ -411,11 +291,11 @@ https://cloud.google.com/appengine/docs/standard/php7/using-memorystore#setup_re
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Core7.php"><a href="files/src-core7.html"><abbr title="src/Core7.php">Core7.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">100</span>
+    <span class="phpdocumentor-element-found-in__line">124</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Print a group of mixed vars passed as arguments</p>
+        <p class="phpdocumentor-summary">Print a group of mixed vars passed as arguments. Example _print($object,$array,$class,...)</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
@@ -439,7 +319,7 @@ https://cloud.google.com/appengine/docs/standard/php7/using-memorystore#setup_re
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Core7.php"><a href="files/src-core7.html"><abbr title="src/Core7.php">Core7.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">108</span>
+    <span class="phpdocumentor-element-found-in__line">132</span>
 
     </aside>
 

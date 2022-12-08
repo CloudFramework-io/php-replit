@@ -3,8 +3,6 @@ Following [CloudFramework Instructions](https://www.notion.so/cloudframework/app
 
 CloudFramwork Academy Instructions can be found [here](https://www.notion.so/cloudframework-academy/BACKEND-PHP-7-4-OPTIMIZED-FOR-APPENGINE-STANDARD-AND-CLOUDFUNCTIONS-e03c20b27bad412ba449814c02248097)
 
-
-
 The following instructions have been adapted to replit.com
 
 ```shell

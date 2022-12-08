@@ -1,8 +1,13 @@
 {
     "require": {
-        "cloudframework-io/appengine-php-core-7.4": "^v74.09151"
+        "cloudframework-io/appengine-php-core-7.4": "^v74.12081"
     },
     "scripts": {
+        "credentials": [
+            "[ -d ./local_data ] && echo \"installing ./local_data\" || mkdir  ./local_data ",
+            "gcloud auth application-default login",
+            "mv ~/.config/gcloud/application_default_credentials.json local_data/"
+        ],
         "serve": [
             "php -S 0.0.0.0:8080 vendor/cloudframework-io/appengine-php-core-7.4/src/dispatcher.php"
         ]
