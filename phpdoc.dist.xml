@@ -16,6 +16,7 @@
           </source>
           <ignore hidden="true" symlinks="true">
             <path>src/class/Opauth/*</path>
+            <path>src/class/Opauth.php</path>
             <path>src/lib/*</path>
             <path>src/lib/**/*</path>
           </ignore>
