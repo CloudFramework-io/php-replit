@@ -10,8 +10,6 @@ class API extends RESTful
     {
 
         // There is a specific method to return error taking a library of default errors
-        $this->setErrorFromCodeLib('params-error');
-
         // to return this error you have to define previously a code in the lib
         // by default are loaded the following codes:
         // $this->addCodeLib('form-params-error','Wrong form paramaters.',400);
@@ -31,7 +29,8 @@ class API extends RESTful
         // $this->addCodeLib('db-error','There is a problem in the DataBase.',503);
 
         // You can add your own codes in the lib
-        // $this->addCodeLib('my-error-code','Description of the error',{status-code-to-be-returned});
+        $this->addCodeLib('my-error-code','Description of the error',418);
+      return $this->setErrorFromCodeLib('my-error-code');
        
     }
 }
