@@ -2,9 +2,7 @@
 /**
  * Basic structure for a CloudFramework API
  * We recomment to use the following structure to build your API. Try this URLs:
- *     https://php.cloudframework.repl.co/00-basics/10-basic-structure
- *     https://php.cloudframework.repl.co/00-basics/10-basic-structure/default
- *     https://php.cloudframework.repl.co/00-basics/10-basic-structure/hello
+ *     https://php.cloudframework.repl.co/00-basics/06-basic-structure
  */
 class API extends RESTful
 {

@@ -3,9 +3,7 @@
 * You can control if you receive a right method, param of formParam and returning
 * a default error if not
 * Try the API end-point
-*    https://php.cloudframework.repl.co/00-basics/04-check-method-params-form-params
-*    https://php.cloudframework.repl.co/00-basics/04-check-method-params-form-params?var1=value1
-*    https://php.cloudframework.repl.co/00-basics/04-check-method-params-form-params?var1=value1&var2=value2
+*    https://php.cloudframework.repl.co/00-basics/05-config-vars
 
 */
 class API extends RESTful
