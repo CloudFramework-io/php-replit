@@ -150,7 +150,7 @@
 
             <div class="phpdocumentor-column -eight phpdocumentor-content">
                     <ul class="phpdocumentor-breadcrumbs">
-            <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="packages/CoreClasses.html">CoreClasses</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
@@ -161,7 +161,7 @@
             <div class="phpdocumentor-element__package">
             in package
             <ul class="phpdocumentor-breadcrumbs">
-                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/CoreClasses.html">CoreClasses</a></li>
                             </ul>
         </div>
     
@@ -171,12 +171,32 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">22</span>
 
     </aside>
 
-        
-    <section class="phpdocumentor-description"></section>
+            <p class="phpdocumentor-summary">Class to Handle GCS Buckets based on Google Cloud Storage for PHP</p>
+
+    <section class="phpdocumentor-description"><p>php example to create a class object:</p>
+<pre class="prettyprint"><code class="language-php">$bucket = $this-&gt;core-&gt;loadClass('Buckets','gs://{BucketName}');
+if($bucket-&gt;error) return ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+</code></pre>
+<p>Url references</p>
+<ul>
+<li>
+<a href="https://github.com/CloudFramework-io/appengine-php-core-7.4/blob/master/src/class/Buckets.php">Buckets Source code</a>
+</li>
+<li>
+<a href="https://replit.com/@cloudframework/php#api/06-buckets/00-explore.php">Try it in replit</a>
+</li>
+<li>
+<a href="https://github.com/googleapis/google-cloud-php/tree/main/Storage">Official Google Documentation about Storage</a>
+</li>
+<li>
+<a href="https://cloudframework.io/contacto-academy/?utm_source=replit_php74_documentor">CloudFramework Academy Storage and Buckets: Backend</a>
+</li>
+</ul>
+</section>
 
 
 
@@ -192,255 +212,186 @@
 
 <dl class="phpdocumentor-table-of-contents">
                     <dt class="phpdocumentor-table-of-contents__entry -property -public">
-    <a href="classes/Buckets.html#property_bucket">$bucket</a>
-    <span>
-                        &nbsp;: mixed            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -public">
-    <a href="classes/Buckets.html#property_code">$code</a>
-    <span>
-                        &nbsp;: mixed            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -public">
-    <a href="classes/Buckets.html#property_debug">$debug</a>
-    <span>
-                        &nbsp;: mixed            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/Buckets.html#property_error">$error</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: bool            </span>
 </dt>
-<dd></dd>
+<dd>If there is an error in the last execution</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a href="classes/Buckets.html#property_errorCode">$errorCode</a>
+    <span>
+                        &nbsp;: string|int            </span>
+</dt>
+<dd>If there is an error it shows the error code</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/Buckets.html#property_errorMsg">$errorMsg</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -public">
-    <a href="classes/Buckets.html#property_gs_bucket">$gs_bucket</a>
-    <span>
-                        &nbsp;: mixed            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -public">
-    <a href="classes/Buckets.html#property_isUploaded">$isUploaded</a>
-    <span>
-                        &nbsp;: mixed            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -public">
-    <a href="classes/Buckets.html#property_max">$max</a>
-    <span>
-                        &nbsp;: mixed            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -public">
-    <a href="classes/Buckets.html#property_uploadedFiles">$uploadedFiles</a>
-    <span>
-                        &nbsp;: mixed            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -public">
-    <a href="classes/Buckets.html#property_vars">$vars</a>
-    <span>
-                        &nbsp;: mixed            </span>
-</dt>
-<dd></dd>
+<dd>If there is an error it shows an array of error messages</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/Buckets.html#property_version">$version</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: string            </span>
 </dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Buckets.html#property_core">$core</a>
-    <span>
-                        &nbsp;: mixed            </span>
-</dt>
-<dd></dd>
+<dd>version of the class.</dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Buckets.html#method___construct">__construct()</a>
+    <a href="classes/Buckets.html#method_deleteFile">deleteFile()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: bool|void    </span>
 </dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Buckets.html#method_addError">addError()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Buckets.html#method_deleteAllFiles">deleteAllFiles()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Buckets.html#method_deleteFiles">deleteFiles()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Buckets.html#method_deleteUploadFiles">deleteUploadFiles()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
+<dd>Delete a filename from $path. if $path is empty it assumes &#039;/&#039;</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Buckets.html#method_fastScan">fastScan()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;|void    </span>
 </dt>
-<dd></dd>
+<dd>Execute a scandir over the path. if $path is empty it assumes &#039;/&#039;</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Buckets.html#method_getCFBlobDownloadUrl">getCFBlobDownloadUrl()</a>
+    <a href="classes/Buckets.html#method_getAdminUrl">getAdminUrl()</a>
     <span>
-                                &nbsp;: string    </span>
+                                &nbsp;: string|null    </span>
 </dt>
-<dd>Returns an url to download a gs_file using CFBlobDownload Technique</dd>
+<dd>Returns the GCS Admin URL for the bucket</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Buckets.html#method_getContents">getContents()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string|void    </span>
 </dt>
-<dd></dd>
+<dd>Return $filename content from $path</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Buckets.html#method_getFileInfo">getFileInfo()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;|void    </span>
+</dt>
+<dd>Returns the GCS $file_path object info</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Buckets.html#method_getInfo">getInfo()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;|void    </span>
 </dt>
-<dd></dd>
+<dd>Returns the GCS bucket info of the gs://bucketname you passed in the Object construction</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Buckets.html#method_getMimeTypeFromExtension">getMimeTypeFromExtension()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Return the mime type for $extesion. If the extension is not found it returns &#039;application/octet-stream&#039;</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Buckets.html#method_getPublicUrl">getPublicUrl()</a>
     <span>
                                 &nbsp;: string|void    </span>
 </dt>
-<dd>It returns a public URL for the object making it Public</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Buckets.html#method_getPublicUrlOld">getPublicUrlOld()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
+<dd>It returns a public URL for the object making it Public you have the rights and the Bucket is Granular</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Buckets.html#method_getSignedDownloadUrl">getSignedDownloadUrl()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string|void    </span>
 </dt>
-<dd></dd>
+<dd>Provides a temporal signed URL to download an object.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Buckets.html#method_getSignedUploadUrl">getSignedUploadUrl()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string|void    </span>
 </dt>
-<dd>Returns the URL to upload a file
-https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-urls-for-php7-2/53833015
-https://www.reddit.com/r/googlecloud/comments/8gchqh/google_cloud_storage_api_php_upload_large_files/dybb9wl/
-https://github.com/googleapis/google-cloud-php/blob/v0.122.0/Storage/src/StorageObject.php#L962
-https://github.com/googleapis/google-cloud-php/issues/1056
-https://github.com/GoogleCloudPlatform/php-docs-samples/tree/master/storage/src</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Buckets.html#method_getUploadUrl">getUploadUrl()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Returns the URL to upload a file
-https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-urls-for-php7-2/53833015</dd>
+<dd>Provides a PUT-signed URL that is used to upload an object.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Buckets.html#method_isDir">isDir()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: bool    </span>
 </dt>
-<dd></dd>
+<dd>tell if path is a dir</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Buckets.html#method_isFile">isFile()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: bool    </span>
 </dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Buckets.html#method_isMkdir">isMkdir()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
+<dd>Tell if path is a file</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Buckets.html#method_manageUploadFiles">manageUploadFiles()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
-<dd></dd>
+<dd>Move files uploaded in $_FILES to temporal space to Bucket $path taking $options</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Buckets.html#method_mkdir">mkdir()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: bool|void    </span>
 </dt>
-<dd></dd>
+<dd>Create a folder inside the bucket</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Buckets.html#method_putContents">putContents()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: bool    </span>
 </dt>
-<dd></dd>
+<dd>Create $filename with $data content in $path</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Buckets.html#method_rmdir">rmdir()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: bool|void    </span>
 </dt>
-<dd></dd>
+<dd>Delete a folder inside the bucket</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Buckets.html#method_scan">scan()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;|null|void    </span>
 </dt>
-<dd></dd>
+<dd>Execute a scandir over the path and evluate if they are files or directories. If the path is incorrect it will return void. If $path is empty it assumes &#039;/&#039;</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Buckets.html#method_setError">setError()</a>
+    <a href="classes/Buckets.html#method_setFilePrivate">setFilePrivate()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string|void    </span>
 </dt>
-<dd></dd>
+<dd>Set the file as private</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Buckets.html#method_setFilePublic">setFilePublic()</a>
+    <span>
+                                &nbsp;: string|void    </span>
+</dt>
+<dd>Set the file as publicRead</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Buckets.html#method_updateFileObject">updateFileObject()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;|void    </span>
+</dt>
+<dd>Update File object properties</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Buckets.html#method_uploadContents">uploadContents()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Upload $source_file_path to the bucket with $filename_path</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Buckets.html#method_uploadFile">uploadFile()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Upload $source_file_path to the bucket with $filename_path</dd>
 
         </dl>
 
@@ -461,108 +412,6 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_bucket">
-        $bucket
-        <a href="classes/Buckets.html#property_bucket" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">16</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$bucket</span>
-     = <span class="phpdocumentor-signature__default-value">&#039;&#039;</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_code">
-        $code
-        <a href="classes/Buckets.html#property_code" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">18</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$code</span>
-     = <span class="phpdocumentor-signature__default-value">&#039;&#039;</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_debug">
-        $debug
-        <a href="classes/Buckets.html#property_debug" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">25</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$debug</span>
-     = <span class="phpdocumentor-signature__default-value">\false</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -public
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="property_error">
         $error
         <a href="classes/Buckets.html#property_error" class="headerlink"><i class="fas fa-link"></i></a>
@@ -572,21 +421,59 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">47</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">If there is an error in the last execution</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">bool</span>
     <span class="phpdocumentor-signature__name">$error</span>
      = <span class="phpdocumentor-signature__default-value">\false</span></code>
 
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><pre class="prettyprint"><code class="language-php">if($bucket-&gt;error) return ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+</code></pre>
+</section>
 
-        <section class="phpdocumentor-description"></section>
+    
+    
 
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_errorCode">
+        $errorCode
+        <a href="classes/Buckets.html#property_errorCode" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">57</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">If there is an error it shows the error code</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">string|int</span>
+    <span class="phpdocumentor-signature__name">$errorCode</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;&#039;</span></code>
+
+        <section class="phpdocumentor-description"><pre class="prettyprint"><code class="language-php">if($bucket-&gt;error) echo $bucket-&gt;errorCode;
+</code></pre>
+</section>
+
+    
     
 
 </article>
@@ -606,191 +493,23 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">66</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">If there is an error it shows an array of error messages</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
     <span class="phpdocumentor-signature__name">$errorMsg</span>
      = <span class="phpdocumentor-signature__default-value">array()</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_gs_bucket">
-        $gs_bucket
-        <a href="classes/Buckets.html#property_gs_bucket" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">24</span>
-
-    </aside>
+        <section class="phpdocumentor-description"><pre class="prettyprint"><code class="language-php">if($bucket-&gt;error) var_dump($bucket-&gt;$errorMsg);
+</code></pre>
+</section>
 
     
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$gs_bucket</span>
-     = <span class="phpdocumentor-signature__default-value">\null</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_isUploaded">
-        $isUploaded
-        <a href="classes/Buckets.html#property_isUploaded" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">22</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$isUploaded</span>
-     = <span class="phpdocumentor-signature__default-value">\false</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_max">
-        $max
-        <a href="classes/Buckets.html#property_max" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">20</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$max</span>
-     = <span class="phpdocumentor-signature__default-value">array()</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_uploadedFiles">
-        $uploadedFiles
-        <a href="classes/Buckets.html#property_uploadedFiles" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">21</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$uploadedFiles</span>
-     = <span class="phpdocumentor-signature__default-value">array()</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_vars">
-        $vars
-        <a href="classes/Buckets.html#property_vars" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">23</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$vars</span>
-     = <span class="phpdocumentor-signature__default-value">[]</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
     
 
 </article>
@@ -810,54 +529,24 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">33</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">version of the class.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$version</span>
-     = <span class="phpdocumentor-signature__default-value">&#039;202212061&#039;</span></code>
+     = <span class="phpdocumentor-signature__default-value">&#039;202212281&#039;</span></code>
 
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><pre class="prettyprint"><code class="language-php">$bucket-&gt;version;
+</code></pre>
+</section>
 
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_core">
-        $core
-        <a href="classes/Buckets.html#property_core" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">14</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$core</span>
-    </code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><p>version of the class</p>
+</section>
 
     
 
@@ -875,40 +564,40 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method___construct">
-        __construct()
-        <a href="classes/Buckets.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_deleteFile">
+        deleteFile()
+        <a href="classes/Buckets.html#method_deleteFile" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">758</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Delete a filename from $path. if $path is empty it assumes &#039;/&#039;</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Core7.html"><abbr title="\Core7">Core7</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$core</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$bucket</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">deleteFile</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filename_path</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|void</span></code>
 
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><p>example:</p>
+<pre class="prettyprint"><code class="language-php">if(!$bucket-&gt;deleteFile('/tmp/file.txt')) {
+    if($bucket-&gt;error) return ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+    else echo &quot;/tmp/file.txt does not exist or can not be deleted&quot;;
+} else echo &quot;/tmp/file.txt has been deleted&quot;;
+</code></pre>
+</section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$core</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Core7.html"><abbr title="\Core7">Core7</abbr></a></span>
+                <span class="phpdocumentor-signature__argument__name">$filename_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$bucket</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>path to the file starting with '/' inside the bucket</p>
+</section>
 
             </dd>
             </dl>
@@ -916,190 +605,11 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">bool|void</span>
             &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_addError">
-        addError()
-        <a href="classes/Buckets.html#method_addError" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">631</span>
+            <section class="phpdocumentor-description"><p>true if the file has been deleted. false if out exist and void if error</p>
+</section>
 
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">addError</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$msg</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$code</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$msg</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$code</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_deleteAllFiles">
-        deleteAllFiles()
-        <a href="classes/Buckets.html#method_deleteAllFiles" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">299</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">deleteAllFiles</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$path</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_deleteFiles">
-        deleteFiles()
-        <a href="classes/Buckets.html#method_deleteFiles" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">300</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">deleteFiles</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$path</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$file</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_deleteUploadFiles">
-        deleteUploadFiles()
-        <a href="classes/Buckets.html#method_deleteUploadFiles" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">94</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">deleteUploadFiles</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
     
 </article>
                     <article
@@ -1115,25 +625,35 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">295</span>
+    <span class="phpdocumentor-element-found-in__line">431</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Execute a scandir over the path. if $path is empty it assumes &#039;/&#039;</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">fastScan</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">fastScan</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|void</span></code>
 
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><p>example:</p>
+<pre class="prettyprint"><code class="language-php">$files = $bucket-&gt;fastScan('/');
+if($bucket-&gt;error) return ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+die(json_encode($bucket-&gt;fastScan('/'),JSON_PRETTY_PRINT));
+</code></pre>
+<p>output example:</p>
+<pre class="prettyprint"><code class="language-json">[ &quot;documents&quot;, &quot;images&quot; ]
+</code></pre>
+</section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$path</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                  = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>path starting with '/' inside the bucket</p>
+</section>
 
             </dd>
             </dl>
@@ -1141,9 +661,11 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|void</span>
             &mdash;
-        
+            <section class="phpdocumentor-description"><p>Array of files in the bucket. if there is any error it will return void</p>
+</section>
+
     
 </article>
                     <article
@@ -1152,61 +674,36 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getCFBlobDownloadUrl">
-        getCFBlobDownloadUrl()
-        <a href="classes/Buckets.html#method_getCFBlobDownloadUrl" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getAdminUrl">
+        getAdminUrl()
+        <a href="classes/Buckets.html#method_getAdminUrl" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">592</span>
+    <span class="phpdocumentor-element-found-in__line">1267</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Returns an url to download a gs_file using CFBlobDownload Technique</p>
+        <p class="phpdocumentor-summary">Returns the GCS Admin URL for the bucket</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getCFBlobDownloadUrl</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$gs_file</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$params</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$blob_service</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;https://api.cloudframework.io/blobs&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">getAdminUrl</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
 
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$gs_file</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$params</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>array ['downloads'=&gt;'number of downloads allowed, by default 1', 'spacename'=&gt;'to store downloads files in Datastore', 'content-type' =&gt;'content type of the file']</p>
+        <section class="phpdocumentor-description"><p>Example of php code</p>
+<pre class="prettyprint"><code class="language-php">$bucket = $this-&gt;core-&gt;loadClass('Buckets',&quot;{$bucket_name}&quot;);
+if(!$bucket-&gt;error) echo $bucket-&gt;getAdminUrl();
+</code></pre>
 </section>
 
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$blob_service</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;https://api.cloudframework.io/blobs&#039;</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-            </dl>
-
+    
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
+    <span class="phpdocumentor-signature__response_type">string|null</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>URL to download the file $params['donwloads'] times</p>
-</section>
-
+        
     
 </article>
                     <article
@@ -1222,16 +719,23 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">388</span>
+    <span class="phpdocumentor-element-found-in__line">729</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Return $filename content from $path</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getContents</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getContents</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|void</span></code>
 
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><p>example:</p>
+<pre class="prettyprint"><code class="language-php">if(!$content = $bucket-&gt;getContents('file.txt','mi content','/tmp')){
+   if($bucket-&gt;error) return ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+   else echo &quot;/tmp/file.txt' does not exist or does not have any content&quot;;
+} else echo $content;
+</code></pre>
+</section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1245,10 +749,11 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$path</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                  = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>optinal path starting with '/' inside the bucket</p>
+</section>
 
             </dd>
             </dl>
@@ -1256,7 +761,62 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">string|void</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>if $filename exist return string content</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getFileInfo">
+        getFileInfo()
+        <a href="classes/Buckets.html#method_getFileInfo" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1285</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the GCS $file_path object info</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getFileInfo</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file_path</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|void</span></code>
+
+        <section class="phpdocumentor-description"><p>Example of php code</p>
+<pre class="prettyprint"><code class="language-php">$bucket = $this-&gt;core-&gt;loadClass('Buckets',&quot;{$bucket_name}&quot;);
+if(!$bucket-&gt;error) return $bucket-&gt;errorMsg;
+$info= $bucket-&gt;getFileInfo('/path/to_file');
+if(!$bucket-&gt;error) return $bucket-&gt;errorMsg;
+else var_dump($info);
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$file_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>route to the file taking gs://{bucket_name}/ as the root path</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|void</span>
             &mdash;
         
     
@@ -1274,25 +834,99 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">577</span>
+    <span class="phpdocumentor-element-found-in__line">1249</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Returns the GCS bucket info of the gs://bucketname you passed in the Object construction</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getInfo</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getInfo</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|void</span></code>
 
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><p>Example of php code</p>
+<pre class="prettyprint"><code class="language-php">$bucket = $this-&gt;core-&gt;loadClass('Buckets',&quot;{$bucket_name}&quot;);
+$bucket-&gt;getInfo();
+</code></pre>
+<p>example to array returned</p>
+<pre class="prettyprint"><code class="language-json">{
+   &quot;kind&quot;: &quot;storage#bucket&quot;,
+   &quot;selfLink&quot;: &quot;https://www.googleapis.com/storage/v1/b/{$bucket_name}&quot;,
+   &quot;id&quot;: &quot;{id-backet-name}&quot;,
+   &quot;name&quot;: &quot;academy-bucket-public&quot;,
+   &quot;projectNumber&quot;: &quot;{number of bucket}}&quot;,
+   &quot;metageneration&quot;: &quot;2&quot;,
+   &quot;location&quot;: &quot;EUROPE-WEST1&quot;,
+   &quot;storageClass&quot;: &quot;STANDARD&quot;,
+   &quot;etag&quot;: &quot;CAI=&quot;,
+   &quot;timeCreated&quot;: &quot;2022-12-16T08:47:07.180Z&quot;,
+   &quot;updated&quot;: &quot;2022-12-16T08:47:24.727Z&quot;,
+   &quot;iamConfiguration&quot;: {
+      &quot;bucketPolicyOnly&quot;: {
+          &quot;enabled&quot;: true,
+          &quot;lockedTime&quot;: &quot;2023-03-16T08:47:07.180Z&quot;
+      },
+      &quot;uniformBucketLevelAccess&quot;: {
+          &quot;enabled&quot;: true,
+          &quot;lockedTime&quot;: &quot;2023-03-16T08:47:07.180Z&quot;
+      },
+      &quot;publicAccessPrevention&quot;: &quot;inherited&quot;
+   },
+  &quot;locationType&quot;: &quot;region&quot;
+}
+</code></pre>
+</section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getMimeTypeFromExtension">
+        getMimeTypeFromExtension()
+        <a href="classes/Buckets.html#method_getMimeTypeFromExtension" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1364</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Return the mime type for $extesion. If the extension is not found it returns &#039;application/octet-stream&#039;</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getMimeTypeFromExtension</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$extension</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"><p>Example of php code</p>
+<pre class="prettyprint"><code class="language-php">$bucket = $this-&gt;core-&gt;loadClass('Buckets',&quot;{$bucket_name}&quot;);
+if(!$bucket-&gt;error) return $bucket-&gt;errorMsg;
+$mime_type= $bucket-&gt;getMimeTypeFromExtension('jpg');
+else echo($mime_type);
+</code></pre>
+<p>The list has been got from https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types</p>
+</section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$file</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                <span class="phpdocumentor-signature__argument__name">$extension</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>is the extension: jpeg,txt,...</p>
+</section>
 
             </dd>
             </dl>
@@ -1300,7 +934,7 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">string</span>
             &mdash;
         
     
@@ -1318,25 +952,33 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">532</span>
+    <span class="phpdocumentor-element-found-in__line">1145</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">It returns a public URL for the object making it Public</p>
+        <p class="phpdocumentor-summary">It returns a public URL for the object making it Public you have the rights and the Bucket is Granular</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getPublicUrl</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$content_type</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|void</span></code>
+                    <span class="phpdocumentor-signature__name">getPublicUrl</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file_path</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$content_type</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|void</span></code>
 
-    
+        <section class="phpdocumentor-description"><p>Example of php code</p>
+<pre class="prettyprint"><code class="language-php">$bucket = $this-&gt;core-&gt;loadClass('Buckets',&quot;{$bucket_name}&quot;);
+if(!$bucket-&gt;error) return $bucket-&gt;errorMsg;
+$url= $bucket-&gt;getPublicUrl('/path/to_file');
+if(!$bucket-&gt;error) return $bucket-&gt;errorMsg;
+else echo($url);
+</code></pre>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$file</span>
+                <span class="phpdocumentor-signature__argument__name">$file_path</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>file path without gs://<bucket-name>/</p>
+                    <section class="phpdocumentor-description"><p>filename path without starting with '/'</p>
 </section>
 
             </dd>
@@ -1346,15 +988,6 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
                  = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>optionally you can set content_type</p>
-</section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$name</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>optionally you can set a anme</p>
 </section>
 
             </dd>
@@ -1376,58 +1009,6 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getPublicUrlOld">
-        getPublicUrlOld()
-        <a href="classes/Buckets.html#method_getPublicUrlOld" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">261</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getPublicUrlOld</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$ssl</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$file</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$ssl</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">true</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="method_getSignedDownloadUrl">
         getSignedDownloadUrl()
         <a href="classes/Buckets.html#method_getSignedDownloadUrl" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1435,41 +1016,59 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">510</span>
+    <span class="phpdocumentor-element-found-in__line">863</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Provides a temporal signed URL to download an object.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getSignedDownloadUrl</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$time</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;1 min&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getSignedDownloadUrl</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filename_path</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\init">init</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$expiration_in_minutes</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">1</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$download_options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|void</span></code>
 
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><p>More information in https://cloud.google.com/storage/docs/access-control/signing-urls-with-helpers#client-libraries_1</p>
+<p>notes:</p>
+<ul>
+<li>if you are using postman send file content as binary.</li>
+<li>you need to use a service account with the right credentials instead a personal credential to avoid the error: Credentials fetcher does not implement Google\Auth\SignBlobInterface</li>
+</ul>
+<p>example</p>
+<pre class="prettyprint"><code class="language-php">$url = $this-&gt;bucket-&gt;getSignedDownloadUrl('/uploads/video_file',2,['responseDisposition'=&gt;'attachment; filename=&quot;myvideo.mp4&quot;'])
+if($bucket-&gt;error) return ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+</code></pre>
+</section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$file</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                <span class="phpdocumentor-signature__argument__name">$filename_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>file name path to upload the file</p>
+</section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$options</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                <span class="phpdocumentor-signature__argument__name">$expiration_in_minutes</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\init">init</abbr></span>
+                 = <span class="phpdocumentor-signature__argument__default-value">1</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>minutes to expire the url. 1 minute by default</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$download_options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                  = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$time</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;1 min&#039;</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>[optional] {
+Available options to update the object.</p>
+<pre class="prettyprint"><code class="prettyprint">@type string $responseDisposition Disposition of the file. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition for further information. Exmples: &quot;inline&quot;, 'attachment; filename=&quot;{filename}&quot;'
+</code></pre>
+<p>}</p>
+</section>
 
             </dd>
             </dl>
@@ -1477,9 +1076,11 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">string|void</span>
             &mdash;
-        
+            <section class="phpdocumentor-description"><p>the url to redirect in order to download or access to the object</p>
+</section>
+
     
 </article>
                     <article
@@ -1495,75 +1096,45 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">429</span>
+    <span class="phpdocumentor-element-found-in__line">790</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Returns the URL to upload a file
-https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-urls-for-php7-2/53833015
-https://www.reddit.com/r/googlecloud/comments/8gchqh/google_cloud_storage_api_php_upload_large_files/dybb9wl/
-https://github.com/googleapis/google-cloud-php/blob/v0.122.0/Storage/src/StorageObject.php#L962
-https://github.com/googleapis/google-cloud-php/issues/1056
-https://github.com/GoogleCloudPlatform/php-docs-samples/tree/master/storage/src</p>
+        <p class="phpdocumentor-summary">Provides a PUT-signed URL that is used to upload an object.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getSignedUploadUrl</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getSignedUploadUrl</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$upload_file_path</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\init">init</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$expiration_in_minutes</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">15</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|void</span></code>
 
-    
+        <section class="phpdocumentor-description"><p>More information in https://cloud.google.com/storage/docs/access-control/signing-urls-with-helpers#client-libraries_1</p>
+<p>notes:</p>
+<ul>
+<li>if you are using postman send file content as binary.</li>
+<li>you need to use a service account with the right credentials instead a personal credential to avoid the error: Credentials fetcher does not implement Google\Auth\SignBlobInterface</li>
+</ul>
+<p>example</p>
+<pre class="prettyprint"><code class="language-php">$url = $this-&gt;bucket-&gt;getSignedUploadUrl('/uploads/video_file')
+if($bucket-&gt;error) return ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+</code></pre>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$file</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                <span class="phpdocumentor-signature__argument__name">$upload_file_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>file name path to upload the file</p>
+</section>
 
             </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getUploadUrl">
-        getUploadUrl()
-        <a href="classes/Buckets.html#method_getUploadUrl" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">408</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Returns the URL to upload a file
-https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-urls-for-php7-2/53833015</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getUploadUrl</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$returnUrl</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$returnUrl</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+                <span class="phpdocumentor-signature__argument__name">$expiration_in_minutes</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\init">init</abbr></span>
+                 = <span class="phpdocumentor-signature__argument__default-value">15</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>is the url the system has to call once the file has been uploaded</p>
+                    <section class="phpdocumentor-description"><p>minutes to expire the url</p>
 </section>
 
             </dd>
@@ -1572,9 +1143,11 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">string|void</span>
             &mdash;
-        
+            <section class="phpdocumentor-description"><p>$returnUrl is the url the system has to call once the file has been uploaded</p>
+</section>
+
     
 </article>
                     <article
@@ -1590,25 +1163,33 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">338</span>
+    <span class="phpdocumentor-element-found-in__line">512</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">tell if path is a dir</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">isDir</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">isDir</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><p>example:</p>
+<pre class="prettyprint"><code class="language-php">if(!$bucket-&gt;isDir('/tmp')){
+   if($bucket-&gt;error) return ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+   else echo &quot;/tmp does not exist or it is not a dir&quot;;
+} else echo &quot;/tmp is dir&quot;;
+</code></pre>
+</section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$path</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                  = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>path starting with '/' inside the bucket</p>
+</section>
 
             </dd>
             </dl>
@@ -1616,9 +1197,11 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">bool</span>
             &mdash;
-        
+            <section class="phpdocumentor-description"><p>true if the path is dir.</p>
+</section>
+
     
 </article>
                     <article
@@ -1634,69 +1217,32 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">343</span>
+    <span class="phpdocumentor-element-found-in__line">530</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Tell if path is a file</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">isFile</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">isFile</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$file</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_isMkdir">
-        isMkdir()
-        <a href="classes/Buckets.html#method_isMkdir" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">348</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">isMkdir</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><p>example:</p>
+<pre class="prettyprint"><code class="language-php">if($info = $this-&gt;bucket-&gt;uploadFile('/uploads/image_to_upload.jpg',__DIR__.'/image_to_upload.jpg',['public'=&gt;true])){
+  var_dump ($info);
+} else var_dump ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+</code></pre>
+</section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$path</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>path starting with '/' inside the bucket</p>
+</section>
 
             </dd>
             </dl>
@@ -1704,9 +1250,11 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">bool</span>
             &mdash;
-        
+            <section class="phpdocumentor-description"><p>true if the path is file.</p>
+</section>
+
     
 </article>
                     <article
@@ -1722,24 +1270,37 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">103</span>
+    <span class="phpdocumentor-element-found-in__line">215</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Move files uploaded in $_FILES to temporal space to Bucket $path taking $options</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">manageUploadFiles</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$dest_bucket</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">manageUploadFiles</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
-    
+        <section class="phpdocumentor-description"><p>example:</p>
+<pre class="prettyprint"><code class="language-php">if(!$bucket-&gt;uploadedFiles) die('there are not files uploaded');
+$options = [];
+$options['public'] = true;
+$options['apply_hash_to_filenames'] = true;
+$options['allowed_extensions'] = ['jpg'];
+$options['allowed_content_types'] = ['image/jpeg'];
+$uploaded_files = $this-&gt;bucket-&gt;manageUploadFiles('/uploads',$options);
+if($bucket-&gt;error) return $bucket-&gt;errorMsg;
+else return $uploaded_files;
+</code></pre>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$dest_bucket</span>
+                <span class="phpdocumentor-signature__argument__name">$path</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                  = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>optional.. if this is passed then it has to start with: gs:// or / for local enviroments with google_app_engine.disable_readonly_filesystem=1 in php.ini</p>
+                    <section class="phpdocumentor-description"><p>optional path to store files uploaded. If it is passed it has to start with '/'</p>
 </section>
 
             </dd>
@@ -1748,7 +1309,13 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
                 : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                  = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>['public'=&gt;(bool),'ssl'=&gt;(bool),'apply_hash_to_filenames'=&gt;(bool),'allowed_extensions'=&gt;(array),'content_types'=&gt;(array)]</p>
+                    <section class="phpdocumentor-description"><p>[optional] {</p>
+<pre class="prettyprint"><code class="prettyprint">@type string $public Makes the files to be public
+@type bool $apply_hash_to_filenames change the original name by a hash to avoid duplicated files
+@type array $allowed_extensions extensions to be allowed in file names: ['jpg','pdf',..]
+@type array $allowed_content_types content_types allowed to be allowed in file names: ['image','image/jpg','plain/txt',..]
+</code></pre>
+<p>}</p>
 </section>
 
             </dd>
@@ -1759,7 +1326,36 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
             &mdash;
-        
+            <section class="phpdocumentor-description"><p>the output is an array with the following structure where 'files' if the name of formParms to send the files in this example:</p>
+<pre class="prettyprint"><code class="language-json">{
+  &quot;files&quot;: [
+    {
+    &quot;name&quot;: &quot;20221221042421_upload63a9cab5988acf3ccdd27d2000e3f9255a7e3e2c48800.jpg&quot;,
+    &quot;type&quot;: &quot;image/jpeg&quot;,
+     &quot;tmp_name&quot;: &quot;/private/var/folders/hb/9499jh9s3jd9gx0q68sm5bj80000gn/T/phpG9pBMz&quot;,
+    &quot;error&quot;: 0,
+    &quot;size&quot;: 1412041,
+    &quot;hash_from_name&quot;: &quot;1.jpg&quot;,
+    &quot;movedTo&quot;: &quot;gs://academy-bucket-mix/uploads/20221221042421_upload63a9cab5988acf3ccdd27d2000e3f9255a7e3e2c48800.jpg&quot;,
+    &quot;publicUrl&quot;: &quot;https://storage.googleapis.com/academy-bucket-mix/uploads/20221221042421_upload63a9cab5988acf3ccdd27d2000e3f9255a7e3e2c48800.jpg&quot;,
+    &quot;mediaLink&quot;: &quot;https://storage.googleapis.com/download/storage/v1/b/academy-bucket-mix/o/uploads%2F20221221042421_upload63a9cab5988acf3ccdd27d2000e3f9255a7e3e2c48800.jpg?generation=1672071863226633&amp;alt=media&quot;
+   },
+   {
+    &quot;name&quot;: &quot;20221223042423_upload63a9cab752d3dfa7ea700b267bf1ef4c9f556f17314bd.jpg&quot;,
+    &quot;type&quot;: &quot;image/jpeg&quot;,
+    &quot;tmp_name&quot;: &quot;/private/var/folders/hb/9499jh9s3jd9gx0q68sm5bj80000gn/T/php3uVF7y&quot;,
+    &quot;error&quot;: 0,
+    &quot;size&quot;: 1111558,
+    &quot;hash_from_name&quot;: &quot;IMG_4338.jpg&quot;,
+    &quot;movedTo&quot;: &quot;gs://academy-bucket-mix/uploads/20221223042423_upload63a9cab752d3dfa7ea700b267bf1ef4c9f556f17314bd.jpg&quot;,
+    &quot;publicUrl&quot;: &quot;https://storage.googleapis.com/academy-bucket-mix/uploads/20221223042423_upload63a9cab752d3dfa7ea700b267bf1ef4c9f556f17314bd.jpg&quot;,
+    &quot;mediaLink&quot;: &quot;https://storage.googleapis.com/download/storage/v1/b/academy-bucket-mix/o/uploads%2F20221223042423_upload63a9cab752d3dfa7ea700b267bf1ef4c9f556f17314bd.jpg?generation=1672071864738350&amp;alt=media&quot;
+   }
+ ]
+}
+</code></pre>
+</section>
+
     
 </article>
                     <article
@@ -1775,25 +1371,32 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">326</span>
+    <span class="phpdocumentor-element-found-in__line">483</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Create a folder inside the bucket</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">mkdir</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">mkdir</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|void</span></code>
 
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><p>example:</p>
+<pre class="prettyprint"><code class="language-php">$deleted = $bucket-&gt;mkdir('/tmp');
+if($bucket-&gt;error) return ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+if($deleted) echo &quot;dir /tmp created&quot;;
+</code></pre>
+</section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$path</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>path starting with '/' inside the bucket</p>
+</section>
 
             </dd>
             </dl>
@@ -1801,9 +1404,11 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">bool|void</span>
             &mdash;
-        
+            <section class="phpdocumentor-description"><p>true if the path is dir and has been created. if there is any error it will return void</p>
+</section>
+
     
 </article>
                     <article
@@ -1819,49 +1424,60 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">372</span>
+    <span class="phpdocumentor-element-found-in__line">695</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Create $filename with $data content in $path</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">putContents</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$data</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[&#039;gs&#039; =&gt; [&#039;Content-Type&#039; =&gt; &#039;text/plain&#039;]]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">putContents</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filename</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$data</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[&#039;gs&#039; =&gt; [&#039;Content-Type&#039; =&gt; &#039;text/plain&#039;]]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><p>example:</p>
+<pre class="prettyprint"><code class="language-php">if(!$bucket-&gt;putContents('file.txt','mi content','/tmp',['gs' =&gt;['Content-Type' =&gt; 'text/plain'])){
+   if($bucket-&gt;error) return ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+   else echo &quot;/tmp/file.txt' can no be created&quot;;
+} else echo &quot;/tmp/file.txt' has been created&quot;;
+</code></pre>
+</section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$file</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                <span class="phpdocumentor-signature__argument__name">$filename</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>name of the file to create</p>
+</section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$data</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>Info to put in $file</p>
+</section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$path</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                  = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>optinal path starting with '/' inside the bucket</p>
+</section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$options</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                  = <span class="phpdocumentor-signature__argument__default-value">[&#039;gs&#039; =&gt; [&#039;Content-Type&#039; =&gt; &#039;text/plain&#039;]]</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>Options to assign file properties</p>
+</section>
 
             </dd>
             </dl>
@@ -1869,9 +1485,11 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">bool</span>
             &mdash;
-        
+            <section class="phpdocumentor-description"><p>true if the path is file.</p>
+</section>
+
     
 </article>
                     <article
@@ -1887,25 +1505,32 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">314</span>
+    <span class="phpdocumentor-element-found-in__line">454</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Delete a folder inside the bucket</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">rmdir</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">rmdir</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|void</span></code>
 
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><p>example:</p>
+<pre class="prettyprint"><code class="language-php">$deleted = $bucket-&gt;rmdir('/tmp');
+if($bucket-&gt;error) return ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+if($deleted) echo &quot;dir /tmp deleted&quot;;
+</code></pre>
+</section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$path</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>path starting with '/' inside the bucket</p>
+</section>
 
             </dd>
             </dl>
@@ -1913,9 +1538,11 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">bool|void</span>
             &mdash;
-        
+            <section class="phpdocumentor-description"><p>true of the path is dir and has been deleted. if there is any error it will return void</p>
+</section>
+
     
 </article>
                     <article
@@ -1931,33 +1558,41 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">286</span>
+    <span class="phpdocumentor-element-found-in__line">398</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Execute a scandir over the path and evluate if they are files or directories. If the path is incorrect it will return void. If $path is empty it assumes &#039;/&#039;</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">scan</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">scan</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null|void</span></code>
 
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><p>example:</p>
+<pre class="prettyprint"><code class="language-php">$files = $bucket-&gt;scan('/');
+if($bucket-&gt;error) return ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+die(json_encode($bucket-&gt;fastScan('/'),JSON_PRETTY_PRINT));
+</code></pre>
+<p>output example:</p>
+<pre class="prettyprint"><code class="language-json">{ &quot;documents&quot;: { &quot;type&quot;: &quot;dir&quot; }, &quot;images&quot;: { &quot;type&quot;: &quot;dir&quot; },&quot;image.jpg&quot;: {&quot;type&quot;:&quot;file&quot;} }
+</code></pre>
+</section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$path</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                  = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null|void</span>
             &mdash;
         
     
@@ -1968,40 +1603,38 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setError">
-        setError()
-        <a href="classes/Buckets.html#method_setError" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_setFilePrivate">
+        setFilePrivate()
+        <a href="classes/Buckets.html#method_setFilePrivate" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">627</span>
+    <span class="phpdocumentor-element-found-in__line">895</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Set the file as private</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setError</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$msg</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$code</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">setFilePrivate</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file_path</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|void</span></code>
 
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><p>example</p>
+<pre class="prettyprint"><code class="language-php">$bucket-&gt;setFilePrivate('/file.txt');
+if($bucket-&gt;error) return ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+</code></pre>
+</section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$msg</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                <span class="phpdocumentor-signature__argument__name">$file_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$code</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>file path without gs://<bucket-name>/</p>
+</section>
 
             </dd>
             </dl>
@@ -2009,9 +1642,342 @@ https://stackoverflow.com/questions/53346083/create-google-cloud-storage-upload-
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">string|void</span>
             &mdash;
-        
+            <section class="phpdocumentor-description"><p>return string public url or void if error</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setFilePublic">
+        setFilePublic()
+        <a href="classes/Buckets.html#method_setFilePublic" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">942</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Set the file as publicRead</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">setFilePublic</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file_path</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|void</span></code>
+
+        <section class="phpdocumentor-description"><p>example</p>
+<pre class="prettyprint"><code class="language-php">$bucket-&gt;setFilePublic('/file.txt');
+if($bucket-&gt;error) return ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$file_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>file path without gs://<bucket-name>/</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string|void</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>return string public url or void if error</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_updateFileObject">
+        updateFileObject()
+        <a href="classes/Buckets.html#method_updateFileObject" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1061</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Update File object properties</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">updateFileObject</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filename_path</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file_options</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|void</span></code>
+
+        <section class="phpdocumentor-description"><p>example:</p>
+<pre class="prettyprint"><code class="language-php">$filename = 'video.mp4';
+$mime_type = $this-&gt;bucket-&gt;getMimeTypeFromExtension(pathinfo($filename, PATHINFO_EXTENSION);
+$options = ['filename'=&gt;$filename,'contentType'=&gt;$mime_type,'public'=&gt;true,'private'=&gt;false];
+$object_info =$this-&gt;bucket-&gt;updateFileObject('/uploads/upload_tmp_file',$options);
+if($this-&gt;bucket-&gt;error) return $this-&gt;setErrorFromCodelib($this-&gt;bucket-&gt;errorCode,$this-&gt;bucket-&gt;errorMsg);
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filename_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>file path starting with '/'</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$file_options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>[optional] {
+Available options to update the object.</p>
+<pre class="prettyprint"><code class="prettyprint">@type string $filename We can change the name of the file with this parameter. It can not have '/' char
+@type string $contentType contentType of the file
+@type string $contentDisposition Disposition of the file. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition for further information
+@type string $predefinedAcl defines the access of the file. It can be: &quot;authenticatedRead&quot;, &quot;bucketOwnerFullControl&quot;, &quot;bucketOwnerRead&quot;, &quot;private&quot;, &quot;projectPrivate&quot;, and &quot;publicRead&quot;
+@type bool $public It says the object has to be public and return publicUrl attribute. It equals to ['predefinedAcl'=&gt;'publicRead']. If it is sent with true value then $predefinedAcl is ignored
+@type bool $private It says the object has to be public and return publicUrl attribute. It equals to ['predefinedAcl'=&gt;'private']. If it is sent with true value then $public and $predefinedAcl are ignored
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|void</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>return the array with the file properties</p>
+<p>example:</p>
+<pre class="prettyprint"><code class="language-json">{
++     &quot;kind&quot;: &quot;storage#object&quot;,
+    id&quot;: &quot;{bucket}/uploads/video.mp4/xxxxx&quot;,
+    selfLink&quot;: &quot;https://www.googleapis.com/storage/v1/b/{bucket}/o/uploads%2Fvideo.mp4&quot;,
+    mediaLink&quot;: &quot;https://storage.googleapis.com/download/storage/v1/b/{bucket}/o/uploads%2Fvideo.mp4?generation=1672201560118273&amp;alt=media&quot;,
+    name&quot;: &quot;uploads/video.mp4&quot;,
+    bucket&quot;: &quot;{bucket}&quot;,
+    generation&quot;: &quot;1672201560118273&quot;,
+    metageneration&quot;: &quot;5&quot;,
+    contentType&quot;: &quot;video/mpeg&quot;,
+    storageClass&quot;: &quot;STANDARD&quot;,
+    size&quot;: &quot;1298315450&quot;,
+    md5Hash&quot;: &quot;h0KTFOhrEFbwdWqhRBQRkQ==&quot;,
+    cacheControl&quot;: &quot;no-cache&quot;,
+    crc32c&quot;: &quot;dML25A==&quot;,
+    etag&quot;: &quot;CIGo75+8m/wCEAU=&quot;,
+    timeCreated&quot;: &quot;2022-12-28T04:26:00.124Z&quot;,
+    updated&quot;: &quot;2022-12-28T04:31:15.669Z&quot;,
+    timeStorageClassUpdated&quot;: &quot;2022-12-28T04:26:00.124Z&quot;,
+    acl&quot;: [
+     {
+        kind&quot;: &quot;storage#objectAccessControl&quot;,
+        object&quot;: &quot;uploads/video.mp4&quot;,
+        generation&quot;: &quot;1672201560118273&quot;,
+        id&quot;: &quot;{bucket}/uploads/video.mp4/1672201560118273/user-datastore-terminal@cloudframework-io.iam.gserviceaccount.com&quot;,
+        selfLink&quot;: &quot;https://www.googleapis.com/storage/v1/b/{bucket}/o/uploads%2Fvideo.mp4/acl/user-datastore-terminal@cloudframework-io.iam.gserviceaccount.com&quot;,
+        bucket&quot;: &quot;{bucket}&quot;,
+        entity&quot;: &quot;user-datastore-terminal@cloudframework-io.iam.gserviceaccount.com&quot;,
+        role&quot;: &quot;OWNER&quot;,
+        email&quot;: &quot;datastore-terminal@cloudframework-io.iam.gserviceaccount.com&quot;,
+        etag&quot;: &quot;CIGo75+8m/wCEAU=&quot;
+     },
+     {
+        kind&quot;: &quot;storage#objectAccessControl&quot;,
+        object&quot;: &quot;uploads/video.mp4&quot;,
+        generation&quot;: &quot;1672201560118273&quot;,
+        id&quot;: &quot;{bucket}/uploads/video.mp4/1672201560118273/allUsers&quot;,
+        selfLink&quot;: &quot;https://www.googleapis.com/storage/v1/b/{bucket}/o/uploads%2Fvideo.mp4/acl/allUsers&quot;,
+        bucket&quot;: &quot;{bucket}&quot;,
+        entity&quot;: &quot;allUsers&quot;,
+        role&quot;: &quot;READER&quot;,
+        etag&quot;: &quot;CIGo75+8m/wCEAU=&quot;
+     }
+   ],
+    owner&quot;: {
+        entity&quot;: &quot;xxxxl@xxxxx.iam.gserviceaccount.com&quot;
+    },
+    publicUrl&quot;: &quot;https://storage.googleapis.com/{bucket}/video.mp4&quot;
+}
+</code></pre>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_uploadContents">
+        uploadContents()
+        <a href="classes/Buckets.html#method_uploadContents" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">569</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Upload $source_file_path to the bucket with $filename_path</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">uploadContents</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filename_path</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$contents</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"><p>example:</p>
+<pre class="prettyprint"><code class="language-php">if($info = $this-&gt;bucket-&gt;uploadContents('/uploads/hello.txt','Hello World',['public'=&gt;true])){
+  var_dump ($info);
+} else var_dump ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filename_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>file name path of the file to create</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$contents</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The contents to upload to the file</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>[optional] {</p>
+<p>Options to create the object file.</p>
+<pre class="prettyprint"><code class="prettyprint">@type bool $public It says the object has to be public and return publicUrl attribute. It equals to ['predefinedAcl'=&gt;'publicRead']
+@type string $predefinedAcl defines the access of the file. It can be: &quot;authenticatedRead&quot;, &quot;bucketOwnerFullControl&quot;, &quot;bucketOwnerRead&quot;, &quot;private&quot;, &quot;projectPrivate&quot;, and &quot;publicRead&quot;
+@type array $metadata for the object to create: contentType, cacheControl.. More info in: : https://cloud.google.com/storage/docs/json_api/v1/objects/insert#request-body
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>with the object created in the bucket</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_uploadFile">
+        uploadFile()
+        <a href="classes/Buckets.html#method_uploadFile" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/class/Buckets.php"><a href="files/src-class-buckets.html"><abbr title="src/class/Buckets.php">Buckets.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">602</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Upload $source_file_path to the bucket with $filename_path</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">uploadFile</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filename_path</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$source_file_path</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"><p>example:</p>
+<pre class="prettyprint"><code class="language-php">if(!$bucket-&gt;putContents('file.txt','mi content','/tmp',['gs' =&gt;['Content-Type' =&gt; 'text/plain'])){
+   if($bucket-&gt;error) return ['errorCode'=&gt;$bucket-&gt;errorCode,'errorMsg'=&gt;$bucket-&gt;errorMsg];
+   else echo &quot;/tmp/file.txt' can no be created&quot;;
+} else echo &quot;/tmp/file.txt' has been created&quot;;
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filename_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>file name path of the file to create</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$source_file_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>local source file to upload</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>[optional] {</p>
+<p>Options to create the object file.</p>
+<pre class="prettyprint"><code class="prettyprint">@type bool $public It says the object has to be public and return publicUrl attribute. It equals to ['predefinedAcl'=&gt;'publicRead']
+@type string $predefinedAcl defines the access of the file. It can be: &quot;authenticatedRead&quot;, &quot;bucketOwnerFullControl&quot;, &quot;bucketOwnerRead&quot;, &quot;private&quot;, &quot;projectPrivate&quot;, and &quot;publicRead&quot;
+@type array $metadata for the object to create: contentType, cacheControl.. More info in: : https://cloud.google.com/storage/docs/json_api/v1/objects/insert#request-body
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>with the object created in the bucket</p>
+</section>
+
     
 </article>
             </section>

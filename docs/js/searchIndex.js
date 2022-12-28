@@ -538,183 +538,138 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Buckets",
             "name": "Buckets",
-            "summary": "",
+            "summary": "Class\u0020to\u0020Handle\u0020GCS\u0020Buckets\u0020based\u0020on\u0020Google\u0020Cloud\u0020Storage\u0020for\u0020PHP",
             "url": "classes/Buckets.html"
-        },                {
-            "fqsen": "\\Buckets\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Buckets.html#method___construct"
-        },                {
-            "fqsen": "\\Buckets\u003A\u003AdeleteUploadFiles\u0028\u0029",
-            "name": "deleteUploadFiles",
-            "summary": "",
-            "url": "classes/Buckets.html#method_deleteUploadFiles"
         },                {
             "fqsen": "\\Buckets\u003A\u003AmanageUploadFiles\u0028\u0029",
             "name": "manageUploadFiles",
-            "summary": "",
+            "summary": "Move\u0020files\u0020uploaded\u0020in\u0020\u0024_FILES\u0020to\u0020temporal\u0020space\u0020to\u0020Bucket\u0020\u0024path\u0020taking\u0020\u0024options",
             "url": "classes/Buckets.html#method_manageUploadFiles"
-        },                {
-            "fqsen": "\\Buckets\u003A\u003AgetPublicUrlOld\u0028\u0029",
-            "name": "getPublicUrlOld",
-            "summary": "",
-            "url": "classes/Buckets.html#method_getPublicUrlOld"
         },                {
             "fqsen": "\\Buckets\u003A\u003Ascan\u0028\u0029",
             "name": "scan",
-            "summary": "",
+            "summary": "Execute\u0020a\u0020scandir\u0020over\u0020the\u0020path\u0020and\u0020evluate\u0020if\u0020they\u0020are\u0020files\u0020or\u0020directories.\u0020If\u0020the\u0020path\u0020is\u0020incorrect\u0020it\u0020will\u0020return\u0020void.\u0020If\u0020\u0024path\u0020is\u0020empty\u0020it\u0020assumes\u0020\u0027\/\u0027",
             "url": "classes/Buckets.html#method_scan"
         },                {
             "fqsen": "\\Buckets\u003A\u003AfastScan\u0028\u0029",
             "name": "fastScan",
-            "summary": "",
+            "summary": "Execute\u0020a\u0020scandir\u0020over\u0020the\u0020path.\u0020if\u0020\u0024path\u0020is\u0020empty\u0020it\u0020assumes\u0020\u0027\/\u0027",
             "url": "classes/Buckets.html#method_fastScan"
-        },                {
-            "fqsen": "\\Buckets\u003A\u003AdeleteAllFiles\u0028\u0029",
-            "name": "deleteAllFiles",
-            "summary": "",
-            "url": "classes/Buckets.html#method_deleteAllFiles"
-        },                {
-            "fqsen": "\\Buckets\u003A\u003AdeleteFiles\u0028\u0029",
-            "name": "deleteFiles",
-            "summary": "",
-            "url": "classes/Buckets.html#method_deleteFiles"
         },                {
             "fqsen": "\\Buckets\u003A\u003Armdir\u0028\u0029",
             "name": "rmdir",
-            "summary": "",
+            "summary": "Delete\u0020a\u0020folder\u0020inside\u0020the\u0020bucket",
             "url": "classes/Buckets.html#method_rmdir"
         },                {
             "fqsen": "\\Buckets\u003A\u003Amkdir\u0028\u0029",
             "name": "mkdir",
-            "summary": "",
+            "summary": "Create\u0020a\u0020folder\u0020inside\u0020the\u0020bucket",
             "url": "classes/Buckets.html#method_mkdir"
         },                {
             "fqsen": "\\Buckets\u003A\u003AisDir\u0028\u0029",
             "name": "isDir",
-            "summary": "",
+            "summary": "tell\u0020if\u0020path\u0020is\u0020a\u0020dir",
             "url": "classes/Buckets.html#method_isDir"
         },                {
             "fqsen": "\\Buckets\u003A\u003AisFile\u0028\u0029",
             "name": "isFile",
-            "summary": "",
+            "summary": "Tell\u0020if\u0020path\u0020is\u0020a\u0020file",
             "url": "classes/Buckets.html#method_isFile"
         },                {
-            "fqsen": "\\Buckets\u003A\u003AisMkdir\u0028\u0029",
-            "name": "isMkdir",
-            "summary": "",
-            "url": "classes/Buckets.html#method_isMkdir"
+            "fqsen": "\\Buckets\u003A\u003AuploadContents\u0028\u0029",
+            "name": "uploadContents",
+            "summary": "Upload\u0020\u0024source_file_path\u0020to\u0020the\u0020bucket\u0020with\u0020\u0024filename_path",
+            "url": "classes/Buckets.html#method_uploadContents"
+        },                {
+            "fqsen": "\\Buckets\u003A\u003AuploadFile\u0028\u0029",
+            "name": "uploadFile",
+            "summary": "Upload\u0020\u0024source_file_path\u0020to\u0020the\u0020bucket\u0020with\u0020\u0024filename_path",
+            "url": "classes/Buckets.html#method_uploadFile"
         },                {
             "fqsen": "\\Buckets\u003A\u003AputContents\u0028\u0029",
             "name": "putContents",
-            "summary": "",
+            "summary": "Create\u0020\u0024filename\u0020with\u0020\u0024data\u0020content\u0020in\u0020\u0024path",
             "url": "classes/Buckets.html#method_putContents"
         },                {
             "fqsen": "\\Buckets\u003A\u003AgetContents\u0028\u0029",
             "name": "getContents",
-            "summary": "",
+            "summary": "Return\u0020\u0024filename\u0020content\u0020from\u0020\u0024path",
             "url": "classes/Buckets.html#method_getContents"
         },                {
-            "fqsen": "\\Buckets\u003A\u003AgetUploadUrl\u0028\u0029",
-            "name": "getUploadUrl",
-            "summary": "Returns\u0020the\u0020URL\u0020to\u0020upload\u0020a\u0020file\nhttps\u003A\/\/stackoverflow.com\/questions\/53346083\/create\u002Dgoogle\u002Dcloud\u002Dstorage\u002Dupload\u002Durls\u002Dfor\u002Dphp7\u002D2\/53833015",
-            "url": "classes/Buckets.html#method_getUploadUrl"
+            "fqsen": "\\Buckets\u003A\u003AdeleteFile\u0028\u0029",
+            "name": "deleteFile",
+            "summary": "Delete\u0020a\u0020filename\u0020from\u0020\u0024path.\u0020if\u0020\u0024path\u0020is\u0020empty\u0020it\u0020assumes\u0020\u0027\/\u0027",
+            "url": "classes/Buckets.html#method_deleteFile"
         },                {
             "fqsen": "\\Buckets\u003A\u003AgetSignedUploadUrl\u0028\u0029",
             "name": "getSignedUploadUrl",
-            "summary": "Returns\u0020the\u0020URL\u0020to\u0020upload\u0020a\u0020file\nhttps\u003A\/\/stackoverflow.com\/questions\/53346083\/create\u002Dgoogle\u002Dcloud\u002Dstorage\u002Dupload\u002Durls\u002Dfor\u002Dphp7\u002D2\/53833015\nhttps\u003A\/\/www.reddit.com\/r\/googlecloud\/comments\/8gchqh\/google_cloud_storage_api_php_upload_large_files\/dybb9wl\/\nhttps\u003A\/\/github.com\/googleapis\/google\u002Dcloud\u002Dphp\/blob\/v0.122.0\/Storage\/src\/StorageObject.php\u0023L962\nhttps\u003A\/\/github.com\/googleapis\/google\u002Dcloud\u002Dphp\/issues\/1056\nhttps\u003A\/\/github.com\/GoogleCloudPlatform\/php\u002Ddocs\u002Dsamples\/tree\/master\/storage\/src",
+            "summary": "Provides\u0020a\u0020PUT\u002Dsigned\u0020URL\u0020that\u0020is\u0020used\u0020to\u0020upload\u0020an\u0020object.",
             "url": "classes/Buckets.html#method_getSignedUploadUrl"
         },                {
             "fqsen": "\\Buckets\u003A\u003AgetSignedDownloadUrl\u0028\u0029",
             "name": "getSignedDownloadUrl",
-            "summary": "",
+            "summary": "Provides\u0020a\u0020temporal\u0020signed\u0020URL\u0020to\u0020download\u0020an\u0020object.",
             "url": "classes/Buckets.html#method_getSignedDownloadUrl"
+        },                {
+            "fqsen": "\\Buckets\u003A\u003AsetFilePrivate\u0028\u0029",
+            "name": "setFilePrivate",
+            "summary": "Set\u0020the\u0020file\u0020as\u0020private",
+            "url": "classes/Buckets.html#method_setFilePrivate"
+        },                {
+            "fqsen": "\\Buckets\u003A\u003AsetFilePublic\u0028\u0029",
+            "name": "setFilePublic",
+            "summary": "Set\u0020the\u0020file\u0020as\u0020publicRead",
+            "url": "classes/Buckets.html#method_setFilePublic"
+        },                {
+            "fqsen": "\\Buckets\u003A\u003AupdateFileObject\u0028\u0029",
+            "name": "updateFileObject",
+            "summary": "Update\u0020File\u0020object\u0020properties",
+            "url": "classes/Buckets.html#method_updateFileObject"
         },                {
             "fqsen": "\\Buckets\u003A\u003AgetPublicUrl\u0028\u0029",
             "name": "getPublicUrl",
-            "summary": "It\u0020returns\u0020a\u0020public\u0020URL\u0020for\u0020the\u0020object\u0020making\u0020it\u0020Public",
+            "summary": "It\u0020returns\u0020a\u0020public\u0020URL\u0020for\u0020the\u0020object\u0020making\u0020it\u0020Public\u0020you\u0020have\u0020the\u0020rights\u0020and\u0020the\u0020Bucket\u0020is\u0020Granular",
             "url": "classes/Buckets.html#method_getPublicUrl"
         },                {
             "fqsen": "\\Buckets\u003A\u003AgetInfo\u0028\u0029",
             "name": "getInfo",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020GCS\u0020bucket\u0020info\u0020of\u0020the\u0020gs\u003A\/\/bucketname\u0020you\u0020passed\u0020in\u0020the\u0020Object\u0020construction",
             "url": "classes/Buckets.html#method_getInfo"
         },                {
-            "fqsen": "\\Buckets\u003A\u003AgetCFBlobDownloadUrl\u0028\u0029",
-            "name": "getCFBlobDownloadUrl",
-            "summary": "Returns\u0020an\u0020url\u0020to\u0020download\u0020a\u0020gs_file\u0020using\u0020CFBlobDownload\u0020Technique",
-            "url": "classes/Buckets.html#method_getCFBlobDownloadUrl"
+            "fqsen": "\\Buckets\u003A\u003AgetAdminUrl\u0028\u0029",
+            "name": "getAdminUrl",
+            "summary": "Returns\u0020the\u0020GCS\u0020Admin\u0020URL\u0020for\u0020the\u0020bucket",
+            "url": "classes/Buckets.html#method_getAdminUrl"
         },                {
-            "fqsen": "\\Buckets\u003A\u003AsetError\u0028\u0029",
-            "name": "setError",
-            "summary": "",
-            "url": "classes/Buckets.html#method_setError"
+            "fqsen": "\\Buckets\u003A\u003AgetFileInfo\u0028\u0029",
+            "name": "getFileInfo",
+            "summary": "Returns\u0020the\u0020GCS\u0020\u0024file_path\u0020object\u0020info",
+            "url": "classes/Buckets.html#method_getFileInfo"
         },                {
-            "fqsen": "\\Buckets\u003A\u003AaddError\u0028\u0029",
-            "name": "addError",
-            "summary": "",
-            "url": "classes/Buckets.html#method_addError"
-        },                {
-            "fqsen": "\\Buckets\u003A\u003A\u0024core",
-            "name": "core",
-            "summary": "",
-            "url": "classes/Buckets.html#property_core"
+            "fqsen": "\\Buckets\u003A\u003AgetMimeTypeFromExtension\u0028\u0029",
+            "name": "getMimeTypeFromExtension",
+            "summary": "Return\u0020the\u0020mime\u0020type\u0020for\u0020\u0024extesion.\u0020If\u0020the\u0020extension\u0020is\u0020not\u0020found\u0020it\u0020returns\u0020\u0027application\/octet\u002Dstream\u0027",
+            "url": "classes/Buckets.html#method_getMimeTypeFromExtension"
         },                {
             "fqsen": "\\Buckets\u003A\u003A\u0024version",
             "name": "version",
-            "summary": "",
+            "summary": "version\u0020of\u0020the\u0020class.",
             "url": "classes/Buckets.html#property_version"
-        },                {
-            "fqsen": "\\Buckets\u003A\u003A\u0024bucket",
-            "name": "bucket",
-            "summary": "",
-            "url": "classes/Buckets.html#property_bucket"
         },                {
             "fqsen": "\\Buckets\u003A\u003A\u0024error",
             "name": "error",
-            "summary": "",
+            "summary": "If\u0020there\u0020is\u0020an\u0020error\u0020in\u0020the\u0020last\u0020execution",
             "url": "classes/Buckets.html#property_error"
         },                {
-            "fqsen": "\\Buckets\u003A\u003A\u0024code",
-            "name": "code",
-            "summary": "",
-            "url": "classes/Buckets.html#property_code"
+            "fqsen": "\\Buckets\u003A\u003A\u0024errorCode",
+            "name": "errorCode",
+            "summary": "If\u0020there\u0020is\u0020an\u0020error\u0020it\u0020shows\u0020the\u0020error\u0020code",
+            "url": "classes/Buckets.html#property_errorCode"
         },                {
             "fqsen": "\\Buckets\u003A\u003A\u0024errorMsg",
             "name": "errorMsg",
-            "summary": "",
+            "summary": "If\u0020there\u0020is\u0020an\u0020error\u0020it\u0020shows\u0020an\u0020array\u0020of\u0020error\u0020messages",
             "url": "classes/Buckets.html#property_errorMsg"
-        },                {
-            "fqsen": "\\Buckets\u003A\u003A\u0024max",
-            "name": "max",
-            "summary": "",
-            "url": "classes/Buckets.html#property_max"
-        },                {
-            "fqsen": "\\Buckets\u003A\u003A\u0024uploadedFiles",
-            "name": "uploadedFiles",
-            "summary": "",
-            "url": "classes/Buckets.html#property_uploadedFiles"
-        },                {
-            "fqsen": "\\Buckets\u003A\u003A\u0024isUploaded",
-            "name": "isUploaded",
-            "summary": "",
-            "url": "classes/Buckets.html#property_isUploaded"
-        },                {
-            "fqsen": "\\Buckets\u003A\u003A\u0024vars",
-            "name": "vars",
-            "summary": "",
-            "url": "classes/Buckets.html#property_vars"
-        },                {
-            "fqsen": "\\Buckets\u003A\u003A\u0024gs_bucket",
-            "name": "gs_bucket",
-            "summary": "",
-            "url": "classes/Buckets.html#property_gs_bucket"
-        },                {
-            "fqsen": "\\Buckets\u003A\u003A\u0024debug",
-            "name": "debug",
-            "summary": "",
-            "url": "classes/Buckets.html#property_debug"
         },                {
             "fqsen": "\\CFA",
             "name": "CFA",
@@ -6608,12 +6563,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RESTful\u003A\u003AgetHeader\u0028\u0029",
             "name": "getHeader",
-            "summary": "",
+            "summary": "Return\u0020the\u0020user\u0020header\u0020key\u0020value.\u0020In\u0020PHP\u0020those\u0020are\u0020\u0024_SERVER\u005B\u0022HTTP_\u0024headerKey\u007D\u0022\u005D.",
             "url": "classes/RESTful.html#method_getHeader"
         },                {
             "fqsen": "\\RESTful\u003A\u003AgetHeaders\u0028\u0029",
             "name": "getHeaders",
-            "summary": "",
+            "summary": "Return\u0020all\u0020the\u0020header\u0020keys\u0020sent\u0020by\u0020the\u0020user.\u0020In\u0020PHP\u0020those\u0020are\u0020\u0024_SERVER\u005B\u0027HTTP_\u007Bvarname\u007D\u0027\u005D",
             "url": "classes/RESTful.html#method_getHeaders"
         },                {
             "fqsen": "\\RESTful\u003A\u003AgetHeadersToResend\u0028\u0029",
@@ -8421,15 +8376,30 @@ Search.appendIndex(
             "summary": "Tell\u0020if\u0020the\u0020user\u0020has\u0020specific\u0020privilege",
             "url": "classes/CoreUser.html#method_hasPrivilege"
         },                {
+            "fqsen": "\\CoreUser\u003A\u003AgetPrivileges\u0028\u0029",
+            "name": "getPrivileges",
+            "summary": "Set\u0020a\u0020privilege\u0020for\u0020a\u0020user",
+            "url": "classes/CoreUser.html#method_getPrivileges"
+        },                {
+            "fqsen": "\\CoreUser\u003A\u003AsetLicense\u0028\u0029",
+            "name": "setLicense",
+            "summary": "Set\u0020a\u0020license\u0020for\u0020a\u0020user",
+            "url": "classes/CoreUser.html#method_setLicense"
+        },                {
             "fqsen": "\\CoreUser\u003A\u003AhasLicense\u0028\u0029",
             "name": "hasLicense",
             "summary": "Tell\u0020if\u0020the\u0020user\u0020has\u0020specific\u0020license",
             "url": "classes/CoreUser.html#method_hasLicense"
         },                {
-            "fqsen": "\\CoreUser\u003A\u003AgetPrivileges\u0028\u0029",
-            "name": "getPrivileges",
+            "fqsen": "\\CoreUser\u003A\u003AunsetLicense\u0028\u0029",
+            "name": "unsetLicense",
+            "summary": "Unset\u0020a\u0020license\u0020for\u0020a\u0020user",
+            "url": "classes/CoreUser.html#method_unsetLicense"
+        },                {
+            "fqsen": "\\CoreUser\u003A\u003AgetLicenses\u0028\u0029",
+            "name": "getLicenses",
             "summary": "Set\u0020a\u0020privilege\u0020for\u0020a\u0020user",
-            "url": "classes/CoreUser.html#method_getPrivileges"
+            "url": "classes/CoreUser.html#method_getLicenses"
         },                {
             "fqsen": "\\CoreUser\u003A\u003AaddError\u0028\u0029",
             "name": "addError",

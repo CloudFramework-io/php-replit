@@ -336,6 +336,13 @@ It allows to work with several active tokens at the same time</dd>
 This method is to be used together with setAuth(..)</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/CoreUser.html#method_getLicenses">getLicenses()</a>
+    <span>
+                                &nbsp;: bool    </span>
+</dt>
+<dd>Set a privilege for a user</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/CoreUser.html#method_getPrivileges">getPrivileges()</a>
     <span>
                                 &nbsp;: bool    </span>
@@ -399,11 +406,25 @@ This method is to be used together with setAuth(..)</dd>
 <dd>Set Auth for a user in a namespace and store the result in cache for new queries</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/CoreUser.html#method_setLicense">setLicense()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Set a license for a user</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/CoreUser.html#method_setPrivilege">setPrivilege()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Set a privilege for a user</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/CoreUser.html#method_unsetLicense">unsetLicense()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Unset a license for a user</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/CoreUser.html#method_unsetPrivilege">unsetPrivilege()</a>
@@ -999,7 +1020,7 @@ This method is to be used together with setAuth(..)</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Core7.php"><a href="files/src-core7.html"><abbr title="src/Core7.php">Core7.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5229</span>
+    <span class="phpdocumentor-element-found-in__line">5262</span>
 
     </aside>
 
@@ -1201,6 +1222,39 @@ This method is to be used together with setAuth(..)</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getLicenses">
+        getLicenses()
+        <a href="classes/CoreUser.html#method_getLicenses" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Core7.php"><a href="files/src-core7.html"><abbr title="src/Core7.php">Core7.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">5252</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Set a privilege for a user</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getLicenses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getPrivileges">
         getPrivileges()
         <a href="classes/CoreUser.html#method_getPrivileges" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1208,7 +1262,7 @@ This method is to be used together with setAuth(..)</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Core7.php"><a href="files/src-core7.html"><abbr title="src/Core7.php">Core7.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5219</span>
+    <span class="phpdocumentor-element-found-in__line">5209</span>
 
     </aside>
 
@@ -1241,7 +1295,7 @@ This method is to be used together with setAuth(..)</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Core7.php"><a href="files/src-core7.html"><abbr title="src/Core7.php">Core7.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5209</span>
+    <span class="phpdocumentor-element-found-in__line">5230</span>
 
     </aside>
 
@@ -1621,6 +1675,56 @@ This method is to be used together with setAuth(..)</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setLicense">
+        setLicense()
+        <a href="classes/CoreUser.html#method_setLicense" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Core7.php"><a href="files/src-core7.html"><abbr title="src/Core7.php">Core7.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">5219</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Set a license for a user</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">setLicense</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$license</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$active</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$license</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$active</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">true</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setPrivilege">
         setPrivilege()
         <a href="classes/CoreUser.html#method_setPrivilege" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1652,6 +1756,49 @@ This method is to be used together with setAuth(..)</p>
                 <span class="phpdocumentor-signature__argument__name">$active</span>
                 : <span class="phpdocumentor-signature__argument__return-type">bool</span>
                  = <span class="phpdocumentor-signature__argument__default-value">true</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_unsetLicense">
+        unsetLicense()
+        <a href="classes/CoreUser.html#method_unsetLicense" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Core7.php"><a href="files/src-core7.html"><abbr title="src/Core7.php">Core7.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">5240</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Unset a license for a user</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">unsetLicense</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$license</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$license</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a></span>
+                            </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
             </dd>

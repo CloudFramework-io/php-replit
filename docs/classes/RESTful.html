@@ -489,9 +489,9 @@ last_update: 20200502</p>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RESTful.html#method_getHeader">getHeader()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string    </span>
 </dt>
-<dd></dd>
+<dd>Return the user header key value. In PHP those are $_SERVER[&quot;HTTP_$headerKey}&quot;].</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RESTful.html#method_getHeaderAuthorization">getHeaderAuthorization()</a>
@@ -503,9 +503,9 @@ last_update: 20200502</p>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RESTful.html#method_getHeaders">getHeaders()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
-<dd></dd>
+<dd>Return all the header keys sent by the user. In PHP those are $_SERVER[&#039;HTTP_{varname}&#039;]</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RESTful.html#method_getHeadersToResend">getHeadersToResend()</a>
@@ -2355,7 +2355,7 @@ last_update: 20200502</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/RESTful.php"><a href="files/src-class-restful.html"><abbr title="src/class/RESTful.php">RESTful.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">792</span>
+    <span class="phpdocumentor-element-found-in__line">801</span>
 
     </aside>
 
@@ -2413,25 +2413,26 @@ last_update: 20200502</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/RESTful.php"><a href="files/src-class-restful.html"><abbr title="src/class/RESTful.php">RESTful.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">754</span>
+    <span class="phpdocumentor-element-found-in__line">759</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Return the user header key value. In PHP those are $_SERVER[&quot;HTTP_$headerKey}&quot;].</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getHeader</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$str</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getHeader</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$headerKey</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$str</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                <span class="phpdocumentor-signature__argument__name">$headerKey</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The name of the header. Vars like X-VAR or X_VAR are treated like the same</p>
+</section>
 
             </dd>
             </dl>
@@ -2439,9 +2440,11 @@ last_update: 20200502</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">string</span>
             &mdash;
-        
+            <section class="phpdocumentor-description"><p>If the key does not exist return empty string</p>
+</section>
+
     
 </article>
                     <article
@@ -2490,22 +2493,22 @@ last_update: 20200502</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/RESTful.php"><a href="files/src-class-restful.html"><abbr title="src/class/RESTful.php">RESTful.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">761</span>
+    <span class="phpdocumentor-element-found-in__line">770</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Return all the header keys sent by the user. In PHP those are $_SERVER[&#039;HTTP_{varname}&#039;]</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getHeaders</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getHeaders</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
     
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
             &mdash;
         
     
@@ -2523,7 +2526,7 @@ last_update: 20200502</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/RESTful.php"><a href="files/src-class-restful.html"><abbr title="src/class/RESTful.php">RESTful.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">770</span>
+    <span class="phpdocumentor-element-found-in__line">779</span>
 
     </aside>
 
@@ -2745,7 +2748,7 @@ last_update: 20200502</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/RESTful.php"><a href="files/src-class-restful.html"><abbr title="src/class/RESTful.php">RESTful.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">802</span>
+    <span class="phpdocumentor-element-found-in__line">811</span>
 
     </aside>
 
@@ -2847,7 +2850,7 @@ last_update: 20200502</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/RESTful.php"><a href="files/src-class-restful.html"><abbr title="src/class/RESTful.php">RESTful.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">828</span>
+    <span class="phpdocumentor-element-found-in__line">837</span>
 
     </aside>
 
@@ -3451,7 +3454,7 @@ last_update: 20200502</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/class/RESTful.php"><a href="files/src-class-restful.html"><abbr title="src/class/RESTful.php">RESTful.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">812</span>
+    <span class="phpdocumentor-element-found-in__line">821</span>
 
     </aside>
 
