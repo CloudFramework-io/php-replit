@@ -1,6 +1,6 @@
 {
     "require": {
-        "cloudframework-io/appengine-php-core-7.4": "v74.12281"
+        "cloudframework-io/appengine-php-core-7.4": "v74.12284"
     },
     "scripts": {
         "credentials": [

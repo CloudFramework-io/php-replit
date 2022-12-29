@@ -138,7 +138,7 @@ class API extends RESTful
 
     /**
      * Example to upload files directly into a Bucket.
-     * It requires in localhost to use a serviceKey instead of user credential
+     * It requires in localhost to use a service account instead of an user credential
      */
     private function uploadUrl() {
 
