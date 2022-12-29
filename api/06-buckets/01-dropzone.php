@@ -1,5 +1,6 @@
 <?php
 /**
+ * API to handle file uploads form WebPage
  * https://php.cloudframework.repl.co/php-replit/docs/classes/Buckets.html
  */
 class API extends RESTful
@@ -24,6 +25,8 @@ class API extends RESTful
      */
     function main()
     {
+        //Allow Ajax Webpage Connection
+        $this->sendCorsHeaders('GET,POST,PUT,DELETE');
         //You can restrict methods in main level
         if(!$this->checkMethod('GET,POST,PUT,DELETE')) return;
 
@@ -51,18 +54,24 @@ class API extends RESTful
     {
       switch($this->method) {
         case 'GET':
-            $this->addReturnData(
-                $this->bucket->scan('/uploads')
-            );
+            //region IF there is no third parameter just list documents available
+            if(!$param = $this->getUrlPathParamater(3)) {
+                $files = $this->bucket->scan('/uploads');
+                if($this->bucket->error) return $this->setErrorFromCodelib('system-error',$this->bucket->errorMsg);
+                $this->addReturnData(['get_url_to_upload'=>$this->core->system->url['host_url'].'/url-to-upload','docs'=>$files]);
+            }
+            //endregion
+            //region ELSE evaluate if the third parameter is a token to give and upload_url
+            else {
+               if($param != 'url-to-upload') return $this->setErrorFromCodelib('params-error',"[/{$param}] is  not supported. Use [/url-to-upload]");
+               $url = $this->bucket->getSignedUploadUrl('/uploads/video_file');
+                if($this->bucket->error) return $this->setErrorFromCodelib('system-error',$this->bucket->errorMsg);
+                $this->addReturnData(['url_to_upload'=>$url]);
+            }
+
             break;
         case 'POST':
-            $this->addReturnData(
-                $this->bucket->upload(
-                    $this->params[0],
-                    $this->params[1],
-                    $this->params[2]
-                )
-            );
+
             break;
       }
     }

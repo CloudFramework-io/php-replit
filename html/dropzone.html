@@ -11,127 +11,135 @@
     
   </head>
   <body>
-    <script>
+  <form
+          id="id-dropzone"
+          class="dropzone"
+          method="post" enctype="multipart/form-data"
+  ></form>
+  <script>
       Core.request.base = 'https://php.cloudframework.repl.co';
-      Core.request.call({url: '/', method: 'GET', contentType: 'json'}, function (response) {
-      })
-    // Note that the name "myDropzone" is the camelized
-    // id of the form.
-    Dropzone.options.myDropzone = {
-      // Configuration options go here
-      url: "/this-url-will-overwritten",
-      uploadMultiple: true,
-      parallelUploads: 5,
-      autoProcessQueue: false,
-      addRemoveLinks: true,
-      clickable: true,
-      paramName: "file",
-      maxFiles: 1, 
-      maxFilesize: 5, // MB
-      acceptedFiles: "image/*",
-      headers: {
-          'X-WEB-KEY': "ExampleOfSecurity"
-      },
-      init: function() {
-          var thisDropzone = this;
+      Core.request.base = 'http://localhost:8080';
+      if(false)
+      Core.request.call({url: '/06-buckets/01-dropzone/academy-bucket-public/uploads', method: 'GET', contentType: 'json'}, function (response) {
+        if(response.success) {
 
-          /**
-           * On file thumbnail click, open file in a browser new tab
-           *
-           * Make sure this listener is registered before attaching existing remote files to
-           * the dropzone
-           */
-          thisDropzone.on('addedfile', function(file) {
-              $(file.previewElement).find('.dz-details').on('click', function() {
+          let docs = {};
+          // Note that the name "myDropzone" is the camelized
+          // id of the form.
+          Dropzone.options.myDropzone = {
+            // Configuration options go here
+            url: "/this-url-will-overwritten",
+            uploadMultiple: true,
+            parallelUploads: 5,
+            autoProcessQueue: false,
+            addRemoveLinks: true,
+            clickable: true,
+            paramName: "file",
+            maxFiles: 1,
+            maxFilesize: 5, // MB
+            acceptedFiles: "image/*",
+            headers: {
+              'X-WEB-KEY': "ExampleOfSecurity"
+            },
+            init: function() {
+              var thisDropzone = this;
+
+              /**
+               * On file thumbnail click, open file in a browser new tab
+               *
+               * Make sure this listener is registered before attaching existing remote files to
+               * the dropzone
+               */
+              thisDropzone.on('addedfile', function(file) {
+                $(file.previewElement).find('.dz-details').on('click', function() {
                   window.open(file.url_public, '_blank');
+                });
               });
-          });
 
-          /**
-           * Attach existing remote files to the dropzone
-           */
-          if(doc.docs) {
-              doc.docs.forEach(function(docFile) {
+              /**
+               * Attach existing remote files to the dropzone
+               */
+              if(doc.docs) {
+                doc.docs.forEach(function(docFile) {
                   var mockFile = docFile;
                   mockFile.isMock = true;
 
                   thisDropzone.emit('addedfile', mockFile);
                   if(docFile.file_type.indexOf('image') >= 0) {
-                      thisDropzone.options.thumbnail.call(thisDropzone, mockFile, docFile.url_public);
+                    thisDropzone.options.thumbnail.call(thisDropzone, mockFile, docFile.url_public);
                   }
 
                   thisDropzone.emit("complete", mockFile);
-              });
-          }
+                });
+              }
 
-          /**
-           * Overwrite native removeFile function in order to ask to the user to confirm the
-           * deletion.
-           *
-           * Dropzone.js natively support such a confirmation (https://www.dropzonejs.com/#config-dictRemoveFileConfirmation),
-           * but it doesn´t support customization of the confirmation popup.
-           */
-          var parentRemoveFile = thisDropzone.removeFile;
-          thisDropzone.removeFile = function(file) {
-              var confirmationTitle = '<i class="fa fa-times txt-color-red"></i> Eliminar fichero: ' + file.name;
-              var confirmationText = '¡Cuidado, esta operación no se puede deshacer!';
-              var removeFileFunction = function() {
+              /**
+               * Overwrite native removeFile function in order to ask to the user to confirm the
+               * deletion.
+               *
+               * Dropzone.js natively support such a confirmation (https://www.dropzonejs.com/#config-dictRemoveFileConfirmation),
+               * but it doesn´t support customization of the confirmation popup.
+               */
+              var parentRemoveFile = thisDropzone.removeFile;
+              thisDropzone.removeFile = function(file) {
+                var confirmationTitle = '<i class="fa fa-times txt-color-red"></i> Eliminar fichero: ' + file.name;
+                var confirmationText = '¡Cuidado, esta operación no se puede deshacer!';
+                var removeFileFunction = function() {
                   Core.request.call({url: file.url_delete, method:'DELETE',contentType:'json'}, function() {
-                      parentRemoveFile.call(thisDropzone, file);
+                    parentRemoveFile.call(thisDropzone, file);
                   }, function(response) {
-                      console.log(response);
+                    console.log(response);
                   });
+                };
+                confirm(confirmationText, removeFileFunction, confirmationTitle);
               };
-              confirm(confirmationText, removeFileFunction, confirmationTitle);
-          };
 
-          /**
-           * On upload success, add the urls to view and delete the files, which can be found
-           * on the response to the upload request
-           */
-          thisDropzone.on('success', function(file, response) {
-              file.url_public = response.data.docs[0].url_public;
-              file.url_delete = response.data.docs[0].url_delete;
-          });
-
-          /**
-           * On upload error, normalize the response in order to find the error message and
-           * display it when the user hovers the failed file
-           */
-          thisDropzone.on('error', function(file, response) {
-              $(file.previewElement).find('.dz-error-message').text(response.errors[0]);
-          });
-
-          /**
-           * Handle the upload request.
-           *
-           * Note the native way to configure the upload url (https://www.dropzonejs.com/#config-url)
-           * cannot be used here, since our upload process to GCloud requires two server requests;
-           * first, a GET request to obtain the actual url where the file must be sent and
-           * then a POST request to that actual url.
-           */
-          thisDropzone.on('addedfile', function(file) {
-              Core.request.call({url: doc.url, method:'GET',contentType:'json'}, function(response) {
-                  //Overwrite the dropzone url with the url from the response
-                  thisDropzone.options.url = response.data.uploadUrl;
-                  thisDropzone.processFile(file);
+              /**
+               * On upload success, add the urls to view and delete the files, which can be found
+               * on the response to the upload request
+               */
+              thisDropzone.on('success', function(file, response) {
+                file.url_public = response.data.docs[0].url_public;
+                file.url_delete = response.data.docs[0].url_delete;
               });
-          });
 
-          /**
-           * Disable click and drag&drop events in order to disable the dropzone when the
-           * document is not editable
-           */
-          if(!isEditableDocument) {
-              thisDropzone.removeAllListeners();
-          }
-      }
-    };
+              /**
+               * On upload error, normalize the response in order to find the error message and
+               * display it when the user hovers the failed file
+               */
+              thisDropzone.on('error', function(file, response) {
+                $(file.previewElement).find('.dz-error-message').text(response.errors[0]);
+              });
+
+              /**
+               * Handle the upload request.
+               *
+               * Note the native way to configure the upload url (https://www.dropzonejs.com/#config-url)
+               * cannot be used here, since our upload process to GCloud requires two server requests;
+               * first, a GET request to obtain the actual url where the file must be sent and
+               * then a POST request to that actual url.
+               */
+              thisDropzone.on('addedfile', function(file) {
+                Core.request.call({url: response.data.get_url_to_upload, method:'GET',contentType:'json'}, function(response) {
+                  //Overwrite the dropzone url with the url from the response
+                  thisDropzone.options.url = response.data.url_to_upload;
+                  thisDropzone.processFile(file);
+                });
+              });
+
+              /**
+               * Disable click and drag&drop events in order to disable the dropzone when the
+               * document is not editable
+               */
+              if(!isEditableDocument) {
+                thisDropzone.removeAllListeners();
+              }
+            }
+          };
+        }
+      });
+
     </script>
-    <form action="/file-upload"
-      id="id-dropzone"
-      class="dropzone"
-      method="post" enctype="multipart/form-data"
-      ></form>
+
   </body>
 </html>
